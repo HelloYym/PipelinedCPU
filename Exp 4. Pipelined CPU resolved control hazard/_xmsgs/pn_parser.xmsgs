@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/alu.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/alu.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/alu.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/alu.v</arg>&quot; Line <arg fmt="%d" index="2">14</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/alu.v&quot; line 14
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/anti_jitter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/anti_jitter.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/anti_jitter.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/clk_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/clk_gen.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/clk_gen.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/controller.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/controller.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/controller.v</arg>&quot; Line <arg fmt="%d" index="2">64</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/controller.v&quot; line 64
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/data_ram.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/datapath.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/datapath.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/datapath.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/datapath.v</arg>&quot; Line <arg fmt="%d" index="2">72</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/datapath.v&quot; line 72
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/display.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/display.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/display.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/displcd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/function.vh&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/inst_rom.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_core.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_core.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_core.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/regfile.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/PipelinedCPUresolvedCtrlHzd/regfile.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/PipelinedCPUresolvedCtrlHzd/define.vh&apos; in file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/regfile.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/PipelinedCPUresolvedCtrlHzd/sim_mips.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

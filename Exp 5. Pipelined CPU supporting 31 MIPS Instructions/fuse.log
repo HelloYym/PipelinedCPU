@@ -1,0 +1,32 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Arch/PipelinedCPU_31instructions/sim_mips_isim_beh.exe -prj Z:/Arch/PipelinedCPU_31instructions/sim_mips_beh.prj work.sim_mips work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/regfile.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/alu.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/datapath.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/controller.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/mips_core.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/inst_rom.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/data_ram.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/mips.v" into library work
+Analyzing Verilog file "Z:/Arch/PipelinedCPU_31instructions/sim_mips.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module controller
+Compiling module regfile
+Compiling module alu
+Compiling module datapath
+Compiling module mips_core
+Compiling module inst_rom
+Compiling module data_ram
+Compiling module mips
+Compiling module sim_mips
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 10 Verilog Units
+Built simulation executable Z:/Arch/PipelinedCPU_31instructions/sim_mips_isim_beh.exe
+Fuse Memory Usage: 29408 KB
+Fuse CPU Usage: 546 ms

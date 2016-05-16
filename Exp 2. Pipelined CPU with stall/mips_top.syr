@@ -1,0 +1,1608 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: mips_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : mips_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "regfile.v" in library work
+Compiling verilog include file "define.vh"
+Compiling verilog file "alu.v" in library work
+Compiling verilog include file "define.vh"
+Module <regfile> compiled
+Compiling verilog include file "mips_define.vh"
+Compiling verilog file "datapath.v" in library work
+Compiling verilog include file "define.vh"
+Module <alu> compiled
+Compiling verilog include file "mips_define.vh"
+Compiling verilog file "controller.v" in library work
+Compiling verilog include file "define.vh"
+Module <datapath> compiled
+Compiling verilog include file "mips_define.vh"
+Compiling verilog file "mips_core.v" in library work
+Compiling verilog include file "define.vh"
+Module <controller> compiled
+Compiling verilog file "inst_rom.v" in library work
+Module <mips_core> compiled
+Compiling verilog file "displcd.v" in library work
+Module <inst_rom> compiled
+Module <displcd> compiled
+Module <genlcd> compiled
+Compiling verilog file "data_ram.v" in library work
+Module <lcd> compiled
+Compiling verilog file "mips.v" in library work
+Compiling verilog include file "define.vh"
+Module <data_ram> compiled
+Compiling verilog file "display.v" in library work
+Compiling verilog include file "define.vh"
+Module <mips> compiled
+Compiling verilog file "clk_gen.v" in library work
+Compiling verilog include file "define.vh"
+Module <display> compiled
+Compiling verilog file "anti_jitter.v" in library work
+Compiling verilog include file "define.vh"
+Module <clk_gen> compiled
+Compiling verilog file "mips_top.v" in library work
+Compiling verilog include file "define.vh"
+Module <anti_jitter> compiled
+Module <mips_top> compiled
+No errors in compilation
+Analysis of file <"mips_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <mips_top> in library <work>.
+
+Analyzing hierarchy for module <clk_gen> in library <work>.
+
+Analyzing hierarchy for module <anti_jitter> in library <work> with parameters.
+	CLK_COUNT = "00000000000001111010000100100000"
+	CLK_FREQ = "00000000000000000000000000110010"
+	INIT_VALUE = "00000000000000000000000000000000"
+	JITTER_MAX = "00000000000000000010011100010000"
+
+Analyzing hierarchy for module <anti_jitter> in library <work> with parameters.
+	CLK_COUNT = "00000000000000011000011010100000"
+	CLK_FREQ = "00000000000000000000000000110010"
+	INIT_VALUE = "00000000000000000000000000000000"
+	JITTER_MAX = "00000000000000000000011111010000"
+
+Analyzing hierarchy for module <anti_jitter> in library <work> with parameters.
+	CLK_COUNT = "00000000000011110100001001000000"
+	CLK_FREQ = "00000000000000000000000000110010"
+	INIT_VALUE = "00000000000000000000000000000001"
+	JITTER_MAX = "00000000000000000100111000100000"
+
+Analyzing hierarchy for module <display> in library <work>.
+
+Analyzing hierarchy for module <mips> in library <work>.
+
+Analyzing hierarchy for module <displcd> in library <work>.
+
+Analyzing hierarchy for module <mips_core> in library <work>.
+
+Analyzing hierarchy for module <inst_rom> in library <work> with parameters.
+	ADDR_WIDTH = "00000000000000000000000000000110"
+
+Analyzing hierarchy for module <data_ram> in library <work> with parameters.
+	ADDR_WIDTH = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <lcd> in library <work>.
+
+Analyzing hierarchy for module <genlcd> in library <work>.
+
+Analyzing hierarchy for module <controller> in library <work> with parameters.
+	EXE_ALU_ADD = "00000000000000000000000000000000"
+	EXE_ALU_AND = "00000000000000000000000000000100"
+	EXE_ALU_OR = "00000000000000000000000000000101"
+	EXE_ALU_SLT = "00000000000000000000000000000010"
+	EXE_ALU_SUB = "00000000000000000000000000000001"
+	EXE_A_BRANCH = "00000000000000000000000000000011"
+	EXE_A_LINK = "00000000000000000000000000000010"
+	EXE_A_RS = "00000000000000000000000000000000"
+	EXE_B_BRANCH = "00000000000000000000000000000011"
+	EXE_B_IMM = "00000000000000000000000000000001"
+	EXE_B_LINK = "00000000000000000000000000000010"
+	EXE_B_RT = "00000000000000000000000000000000"
+	GPR_A0 = "00000000000000000000000000000100"
+	GPR_A1 = "00000000000000000000000000000101"
+	GPR_A2 = "00000000000000000000000000000110"
+	GPR_A3 = "00000000000000000000000000000111"
+	GPR_AT = "00000000000000000000000000000001"
+	GPR_FP = "00000000000000000000000000011110"
+	GPR_GP = "00000000000000000000000000011100"
+	GPR_K0 = "00000000000000000000000000011010"
+	GPR_K1 = "00000000000000000000000000011011"
+	GPR_RA = "00000000000000000000000000011111"
+	GPR_S0 = "00000000000000000000000000010000"
+	GPR_S1 = "00000000000000000000000000010001"
+	GPR_S2 = "00000000000000000000000000010010"
+	GPR_S3 = "00000000000000000000000000010011"
+	GPR_S4 = "00000000000000000000000000010100"
+	GPR_S5 = "00000000000000000000000000010101"
+	GPR_S6 = "00000000000000000000000000010110"
+	GPR_S7 = "00000000000000000000000000010111"
+	GPR_SP = "00000000000000000000000000011101"
+	GPR_T0 = "00000000000000000000000000001000"
+	GPR_T1 = "00000000000000000000000000001001"
+	GPR_T2 = "00000000000000000000000000001010"
+	GPR_T3 = "00000000000000000000000000001011"
+	GPR_T4 = "00000000000000000000000000001100"
+	GPR_T5 = "00000000000000000000000000001101"
+	GPR_T6 = "00000000000000000000000000001110"
+	GPR_T7 = "00000000000000000000000000001111"
+	GPR_T8 = "00000000000000000000000000011000"
+	GPR_T9 = "00000000000000000000000000011001"
+	GPR_V0 = "00000000000000000000000000000010"
+	GPR_V1 = "00000000000000000000000000000011"
+	GPR_ZERO = "00000000000000000000000000000000"
+	INST_ADDI = "001000"
+	INST_ANDI = "001100"
+	INST_BEQ = "000100"
+	INST_BNE = "000101"
+	INST_J = "000010"
+	INST_JAL = "000011"
+	INST_LW = "100011"
+	INST_ORI = "001101"
+	INST_R = "000000"
+	INST_SW = "101011"
+	PC_BEQ = "00000000000000000000000000000100"
+	PC_BNE = "00000000000000000000000000000101"
+	PC_JR = "00000000000000000000000000000010"
+	PC_JUMP = "00000000000000000000000000000001"
+	PC_NEXT = "00000000000000000000000000000000"
+	PC_RESET = "00000000000000000000000000000000"
+	R_FUNC_ADD = "100000"
+	R_FUNC_AND = "100100"
+	R_FUNC_JR = "001000"
+	R_FUNC_OR = "100101"
+	R_FUNC_SLT = "101010"
+	R_FUNC_SUB = "100010"
+	WB_ADDR_LINK = "00000000000000000000000000000010"
+	WB_ADDR_RD = "00000000000000000000000000000000"
+	WB_ADDR_RT = "00000000000000000000000000000001"
+	WB_DATA_ALU = "00000000000000000000000000000000"
+	WB_DATA_MEM = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <datapath> in library <work> with parameters.
+	EXE_ALU_ADD = "00000000000000000000000000000000"
+	EXE_ALU_AND = "00000000000000000000000000000100"
+	EXE_ALU_OR = "00000000000000000000000000000101"
+	EXE_ALU_SLT = "00000000000000000000000000000010"
+	EXE_ALU_SUB = "00000000000000000000000000000001"
+	EXE_A_BRANCH = "00000000000000000000000000000011"
+	EXE_A_LINK = "00000000000000000000000000000010"
+	EXE_A_RS = "00000000000000000000000000000000"
+	EXE_B_BRANCH = "00000000000000000000000000000011"
+	EXE_B_IMM = "00000000000000000000000000000001"
+	EXE_B_LINK = "00000000000000000000000000000010"
+	EXE_B_RT = "00000000000000000000000000000000"
+	GPR_A0 = "00000000000000000000000000000100"
+	GPR_A1 = "00000000000000000000000000000101"
+	GPR_A2 = "00000000000000000000000000000110"
+	GPR_A3 = "00000000000000000000000000000111"
+	GPR_AT = "00000000000000000000000000000001"
+	GPR_FP = "00000000000000000000000000011110"
+	GPR_GP = "00000000000000000000000000011100"
+	GPR_K0 = "00000000000000000000000000011010"
+	GPR_K1 = "00000000000000000000000000011011"
+	GPR_RA = "00000000000000000000000000011111"
+	GPR_S0 = "00000000000000000000000000010000"
+	GPR_S1 = "00000000000000000000000000010001"
+	GPR_S2 = "00000000000000000000000000010010"
+	GPR_S3 = "00000000000000000000000000010011"
+	GPR_S4 = "00000000000000000000000000010100"
+	GPR_S5 = "00000000000000000000000000010101"
+	GPR_S6 = "00000000000000000000000000010110"
+	GPR_S7 = "00000000000000000000000000010111"
+	GPR_SP = "00000000000000000000000000011101"
+	GPR_T0 = "00000000000000000000000000001000"
+	GPR_T1 = "00000000000000000000000000001001"
+	GPR_T2 = "00000000000000000000000000001010"
+	GPR_T3 = "00000000000000000000000000001011"
+	GPR_T4 = "00000000000000000000000000001100"
+	GPR_T5 = "00000000000000000000000000001101"
+	GPR_T6 = "00000000000000000000000000001110"
+	GPR_T7 = "00000000000000000000000000001111"
+	GPR_T8 = "00000000000000000000000000011000"
+	GPR_T9 = "00000000000000000000000000011001"
+	GPR_V0 = "00000000000000000000000000000010"
+	GPR_V1 = "00000000000000000000000000000011"
+	GPR_ZERO = "00000000000000000000000000000000"
+	INST_ADDI = "001000"
+	INST_ANDI = "001100"
+	INST_BEQ = "000100"
+	INST_BNE = "000101"
+	INST_J = "000010"
+	INST_JAL = "000011"
+	INST_LW = "100011"
+	INST_ORI = "001101"
+	INST_R = "000000"
+	INST_SW = "101011"
+	PC_BEQ = "00000000000000000000000000000100"
+	PC_BNE = "00000000000000000000000000000101"
+	PC_JR = "00000000000000000000000000000010"
+	PC_JUMP = "00000000000000000000000000000001"
+	PC_NEXT = "00000000000000000000000000000000"
+	PC_RESET = "00000000000000000000000000000000"
+	R_FUNC_ADD = "100000"
+	R_FUNC_AND = "100100"
+	R_FUNC_JR = "001000"
+	R_FUNC_OR = "100101"
+	R_FUNC_SLT = "101010"
+	R_FUNC_SUB = "100010"
+	WB_ADDR_LINK = "00000000000000000000000000000010"
+	WB_ADDR_RD = "00000000000000000000000000000000"
+	WB_ADDR_RT = "00000000000000000000000000000001"
+	WB_DATA_ALU = "00000000000000000000000000000000"
+	WB_DATA_MEM = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <regfile> in library <work>.
+
+Analyzing hierarchy for module <alu> in library <work> with parameters.
+	EXE_ALU_ADD = "00000000000000000000000000000000"
+	EXE_ALU_AND = "00000000000000000000000000000100"
+	EXE_ALU_OR = "00000000000000000000000000000101"
+	EXE_ALU_SLT = "00000000000000000000000000000010"
+	EXE_ALU_SUB = "00000000000000000000000000000001"
+	EXE_A_BRANCH = "00000000000000000000000000000011"
+	EXE_A_LINK = "00000000000000000000000000000010"
+	EXE_A_RS = "00000000000000000000000000000000"
+	EXE_B_BRANCH = "00000000000000000000000000000011"
+	EXE_B_IMM = "00000000000000000000000000000001"
+	EXE_B_LINK = "00000000000000000000000000000010"
+	EXE_B_RT = "00000000000000000000000000000000"
+	GPR_A0 = "00000000000000000000000000000100"
+	GPR_A1 = "00000000000000000000000000000101"
+	GPR_A2 = "00000000000000000000000000000110"
+	GPR_A3 = "00000000000000000000000000000111"
+	GPR_AT = "00000000000000000000000000000001"
+	GPR_FP = "00000000000000000000000000011110"
+	GPR_GP = "00000000000000000000000000011100"
+	GPR_K0 = "00000000000000000000000000011010"
+	GPR_K1 = "00000000000000000000000000011011"
+	GPR_RA = "00000000000000000000000000011111"
+	GPR_S0 = "00000000000000000000000000010000"
+	GPR_S1 = "00000000000000000000000000010001"
+	GPR_S2 = "00000000000000000000000000010010"
+	GPR_S3 = "00000000000000000000000000010011"
+	GPR_S4 = "00000000000000000000000000010100"
+	GPR_S5 = "00000000000000000000000000010101"
+	GPR_S6 = "00000000000000000000000000010110"
+	GPR_S7 = "00000000000000000000000000010111"
+	GPR_SP = "00000000000000000000000000011101"
+	GPR_T0 = "00000000000000000000000000001000"
+	GPR_T1 = "00000000000000000000000000001001"
+	GPR_T2 = "00000000000000000000000000001010"
+	GPR_T3 = "00000000000000000000000000001011"
+	GPR_T4 = "00000000000000000000000000001100"
+	GPR_T5 = "00000000000000000000000000001101"
+	GPR_T6 = "00000000000000000000000000001110"
+	GPR_T7 = "00000000000000000000000000001111"
+	GPR_T8 = "00000000000000000000000000011000"
+	GPR_T9 = "00000000000000000000000000011001"
+	GPR_V0 = "00000000000000000000000000000010"
+	GPR_V1 = "00000000000000000000000000000011"
+	GPR_ZERO = "00000000000000000000000000000000"
+	INST_ADDI = "001000"
+	INST_ANDI = "001100"
+	INST_BEQ = "000100"
+	INST_BNE = "000101"
+	INST_J = "000010"
+	INST_JAL = "000011"
+	INST_LW = "100011"
+	INST_ORI = "001101"
+	INST_R = "000000"
+	INST_SW = "101011"
+	PC_BEQ = "00000000000000000000000000000100"
+	PC_BNE = "00000000000000000000000000000101"
+	PC_JR = "00000000000000000000000000000010"
+	PC_JUMP = "00000000000000000000000000000001"
+	PC_NEXT = "00000000000000000000000000000000"
+	PC_RESET = "00000000000000000000000000000000"
+	R_FUNC_ADD = "100000"
+	R_FUNC_AND = "100100"
+	R_FUNC_JR = "001000"
+	R_FUNC_OR = "100101"
+	R_FUNC_SLT = "101010"
+	R_FUNC_SUB = "100010"
+	WB_ADDR_LINK = "00000000000000000000000000000010"
+	WB_ADDR_RD = "00000000000000000000000000000000"
+	WB_ADDR_RT = "00000000000000000000000000000001"
+	WB_DATA_ALU = "00000000000000000000000000000000"
+	WB_DATA_MEM = "00000000000000000000000000000001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <mips_top>.
+Module <mips_top> is correct for synthesis.
+ 
+Analyzing module <clk_gen> in library <work>.
+Module <clk_gen> is correct for synthesis.
+ 
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "CLKFX_DIVIDE =  10" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "CLK_FEEDBACK =  2X" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SYS> in unit <clk_gen>.
+    Set user-defined property "STARTUP_WAIT =  TRUE" for instance <DCM_SYS> in unit <clk_gen>.
+Analyzing module <anti_jitter.1> in library <work>.
+	CLK_COUNT = 32'sb00000000000001111010000100100000
+	CLK_FREQ = 32'sb00000000000000000000000000110010
+	INIT_VALUE = 32'sb00000000000000000000000000000000
+	JITTER_MAX = 32'sb00000000000000000010011100010000
+Module <anti_jitter.1> is correct for synthesis.
+ 
+Analyzing module <anti_jitter.2> in library <work>.
+	CLK_COUNT = 32'sb00000000000000011000011010100000
+	CLK_FREQ = 32'sb00000000000000000000000000110010
+	INIT_VALUE = 32'sb00000000000000000000000000000000
+	JITTER_MAX = 32'sb00000000000000000000011111010000
+Module <anti_jitter.2> is correct for synthesis.
+ 
+Analyzing module <anti_jitter.3> in library <work>.
+	CLK_COUNT = 32'sb00000000000011110100001001000000
+	CLK_FREQ = 32'sb00000000000000000000000000110010
+	INIT_VALUE = 32'sb00000000000000000000000000000001
+	JITTER_MAX = 32'sb00000000000000000100111000100000
+Module <anti_jitter.3> is correct for synthesis.
+ 
+Analyzing module <display> in library <work>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+	Calling function <num2str>.
+Module <display> is correct for synthesis.
+ 
+Analyzing module <displcd> in library <work>.
+Module <displcd> is correct for synthesis.
+ 
+Analyzing module <lcd> in library <work>.
+Module <lcd> is correct for synthesis.
+ 
+Analyzing module <genlcd> in library <work>.
+WARNING:Xst:790 - "displcd.v" line 107: Index value(s) does not match array range, simulation mismatch.
+Module <genlcd> is correct for synthesis.
+ 
+Analyzing module <mips> in library <work>.
+Module <mips> is correct for synthesis.
+ 
+Analyzing module <mips_core> in library <work>.
+Module <mips_core> is correct for synthesis.
+ 
+Analyzing module <controller> in library <work>.
+	EXE_ALU_ADD = 32'sb00000000000000000000000000000000
+	EXE_ALU_AND = 32'sb00000000000000000000000000000100
+	EXE_ALU_OR = 32'sb00000000000000000000000000000101
+	EXE_ALU_SLT = 32'sb00000000000000000000000000000010
+	EXE_ALU_SUB = 32'sb00000000000000000000000000000001
+	EXE_A_BRANCH = 32'sb00000000000000000000000000000011
+	EXE_A_LINK = 32'sb00000000000000000000000000000010
+	EXE_A_RS = 32'sb00000000000000000000000000000000
+	EXE_B_BRANCH = 32'sb00000000000000000000000000000011
+	EXE_B_IMM = 32'sb00000000000000000000000000000001
+	EXE_B_LINK = 32'sb00000000000000000000000000000010
+	EXE_B_RT = 32'sb00000000000000000000000000000000
+	GPR_A0 = 32'sb00000000000000000000000000000100
+	GPR_A1 = 32'sb00000000000000000000000000000101
+	GPR_A2 = 32'sb00000000000000000000000000000110
+	GPR_A3 = 32'sb00000000000000000000000000000111
+	GPR_AT = 32'sb00000000000000000000000000000001
+	GPR_FP = 32'sb00000000000000000000000000011110
+	GPR_GP = 32'sb00000000000000000000000000011100
+	GPR_K0 = 32'sb00000000000000000000000000011010
+	GPR_K1 = 32'sb00000000000000000000000000011011
+	GPR_RA = 32'sb00000000000000000000000000011111
+	GPR_S0 = 32'sb00000000000000000000000000010000
+	GPR_S1 = 32'sb00000000000000000000000000010001
+	GPR_S2 = 32'sb00000000000000000000000000010010
+	GPR_S3 = 32'sb00000000000000000000000000010011
+	GPR_S4 = 32'sb00000000000000000000000000010100
+	GPR_S5 = 32'sb00000000000000000000000000010101
+	GPR_S6 = 32'sb00000000000000000000000000010110
+	GPR_S7 = 32'sb00000000000000000000000000010111
+	GPR_SP = 32'sb00000000000000000000000000011101
+	GPR_T0 = 32'sb00000000000000000000000000001000
+	GPR_T1 = 32'sb00000000000000000000000000001001
+	GPR_T2 = 32'sb00000000000000000000000000001010
+	GPR_T3 = 32'sb00000000000000000000000000001011
+	GPR_T4 = 32'sb00000000000000000000000000001100
+	GPR_T5 = 32'sb00000000000000000000000000001101
+	GPR_T6 = 32'sb00000000000000000000000000001110
+	GPR_T7 = 32'sb00000000000000000000000000001111
+	GPR_T8 = 32'sb00000000000000000000000000011000
+	GPR_T9 = 32'sb00000000000000000000000000011001
+	GPR_V0 = 32'sb00000000000000000000000000000010
+	GPR_V1 = 32'sb00000000000000000000000000000011
+	GPR_ZERO = 32'sb00000000000000000000000000000000
+	INST_ADDI = 6'b001000
+	INST_ANDI = 6'b001100
+	INST_BEQ = 6'b000100
+	INST_BNE = 6'b000101
+	INST_J = 6'b000010
+	INST_JAL = 6'b000011
+	INST_LW = 6'b100011
+	INST_ORI = 6'b001101
+	INST_R = 6'b000000
+	INST_SW = 6'b101011
+	PC_BEQ = 32'sb00000000000000000000000000000100
+	PC_BNE = 32'sb00000000000000000000000000000101
+	PC_JR = 32'sb00000000000000000000000000000010
+	PC_JUMP = 32'sb00000000000000000000000000000001
+	PC_NEXT = 32'sb00000000000000000000000000000000
+	PC_RESET = 32'b00000000000000000000000000000000
+	R_FUNC_ADD = 6'b100000
+	R_FUNC_AND = 6'b100100
+	R_FUNC_JR = 6'b001000
+	R_FUNC_OR = 6'b100101
+	R_FUNC_SLT = 6'b101010
+	R_FUNC_SUB = 6'b100010
+	WB_ADDR_LINK = 32'sb00000000000000000000000000000010
+	WB_ADDR_RD = 32'sb00000000000000000000000000000000
+	WB_ADDR_RT = 32'sb00000000000000000000000000000001
+	WB_DATA_ALU = 32'sb00000000000000000000000000000000
+	WB_DATA_MEM = 32'sb00000000000000000000000000000001
+Module <controller> is correct for synthesis.
+ 
+Analyzing module <datapath> in library <work>.
+	EXE_ALU_ADD = 32'sb00000000000000000000000000000000
+	EXE_ALU_AND = 32'sb00000000000000000000000000000100
+	EXE_ALU_OR = 32'sb00000000000000000000000000000101
+	EXE_ALU_SLT = 32'sb00000000000000000000000000000010
+	EXE_ALU_SUB = 32'sb00000000000000000000000000000001
+	EXE_A_BRANCH = 32'sb00000000000000000000000000000011
+	EXE_A_LINK = 32'sb00000000000000000000000000000010
+	EXE_A_RS = 32'sb00000000000000000000000000000000
+	EXE_B_BRANCH = 32'sb00000000000000000000000000000011
+	EXE_B_IMM = 32'sb00000000000000000000000000000001
+	EXE_B_LINK = 32'sb00000000000000000000000000000010
+	EXE_B_RT = 32'sb00000000000000000000000000000000
+	GPR_A0 = 32'sb00000000000000000000000000000100
+	GPR_A1 = 32'sb00000000000000000000000000000101
+	GPR_A2 = 32'sb00000000000000000000000000000110
+	GPR_A3 = 32'sb00000000000000000000000000000111
+	GPR_AT = 32'sb00000000000000000000000000000001
+	GPR_FP = 32'sb00000000000000000000000000011110
+	GPR_GP = 32'sb00000000000000000000000000011100
+	GPR_K0 = 32'sb00000000000000000000000000011010
+	GPR_K1 = 32'sb00000000000000000000000000011011
+	GPR_RA = 32'sb00000000000000000000000000011111
+	GPR_S0 = 32'sb00000000000000000000000000010000
+	GPR_S1 = 32'sb00000000000000000000000000010001
+	GPR_S2 = 32'sb00000000000000000000000000010010
+	GPR_S3 = 32'sb00000000000000000000000000010011
+	GPR_S4 = 32'sb00000000000000000000000000010100
+	GPR_S5 = 32'sb00000000000000000000000000010101
+	GPR_S6 = 32'sb00000000000000000000000000010110
+	GPR_S7 = 32'sb00000000000000000000000000010111
+	GPR_SP = 32'sb00000000000000000000000000011101
+	GPR_T0 = 32'sb00000000000000000000000000001000
+	GPR_T1 = 32'sb00000000000000000000000000001001
+	GPR_T2 = 32'sb00000000000000000000000000001010
+	GPR_T3 = 32'sb00000000000000000000000000001011
+	GPR_T4 = 32'sb00000000000000000000000000001100
+	GPR_T5 = 32'sb00000000000000000000000000001101
+	GPR_T6 = 32'sb00000000000000000000000000001110
+	GPR_T7 = 32'sb00000000000000000000000000001111
+	GPR_T8 = 32'sb00000000000000000000000000011000
+	GPR_T9 = 32'sb00000000000000000000000000011001
+	GPR_V0 = 32'sb00000000000000000000000000000010
+	GPR_V1 = 32'sb00000000000000000000000000000011
+	GPR_ZERO = 32'sb00000000000000000000000000000000
+	INST_ADDI = 6'b001000
+	INST_ANDI = 6'b001100
+	INST_BEQ = 6'b000100
+	INST_BNE = 6'b000101
+	INST_J = 6'b000010
+	INST_JAL = 6'b000011
+	INST_LW = 6'b100011
+	INST_ORI = 6'b001101
+	INST_R = 6'b000000
+	INST_SW = 6'b101011
+	PC_BEQ = 32'sb00000000000000000000000000000100
+	PC_BNE = 32'sb00000000000000000000000000000101
+	PC_JR = 32'sb00000000000000000000000000000010
+	PC_JUMP = 32'sb00000000000000000000000000000001
+	PC_NEXT = 32'sb00000000000000000000000000000000
+	PC_RESET = 32'b00000000000000000000000000000000
+	R_FUNC_ADD = 6'b100000
+	R_FUNC_AND = 6'b100100
+	R_FUNC_JR = 6'b001000
+	R_FUNC_OR = 6'b100101
+	R_FUNC_SLT = 6'b101010
+	R_FUNC_SUB = 6'b100010
+	WB_ADDR_LINK = 32'sb00000000000000000000000000000010
+	WB_ADDR_RD = 32'sb00000000000000000000000000000000
+	WB_ADDR_RT = 32'sb00000000000000000000000000000001
+	WB_DATA_ALU = 32'sb00000000000000000000000000000000
+	WB_DATA_MEM = 32'sb00000000000000000000000000000001
+Module <datapath> is correct for synthesis.
+ 
+Analyzing module <regfile> in library <work>.
+Module <regfile> is correct for synthesis.
+ 
+Analyzing module <alu> in library <work>.
+	EXE_ALU_ADD = 32'sb00000000000000000000000000000000
+	EXE_ALU_AND = 32'sb00000000000000000000000000000100
+	EXE_ALU_OR = 32'sb00000000000000000000000000000101
+	EXE_ALU_SLT = 32'sb00000000000000000000000000000010
+	EXE_ALU_SUB = 32'sb00000000000000000000000000000001
+	EXE_A_BRANCH = 32'sb00000000000000000000000000000011
+	EXE_A_LINK = 32'sb00000000000000000000000000000010
+	EXE_A_RS = 32'sb00000000000000000000000000000000
+	EXE_B_BRANCH = 32'sb00000000000000000000000000000011
+	EXE_B_IMM = 32'sb00000000000000000000000000000001
+	EXE_B_LINK = 32'sb00000000000000000000000000000010
+	EXE_B_RT = 32'sb00000000000000000000000000000000
+	GPR_A0 = 32'sb00000000000000000000000000000100
+	GPR_A1 = 32'sb00000000000000000000000000000101
+	GPR_A2 = 32'sb00000000000000000000000000000110
+	GPR_A3 = 32'sb00000000000000000000000000000111
+	GPR_AT = 32'sb00000000000000000000000000000001
+	GPR_FP = 32'sb00000000000000000000000000011110
+	GPR_GP = 32'sb00000000000000000000000000011100
+	GPR_K0 = 32'sb00000000000000000000000000011010
+	GPR_K1 = 32'sb00000000000000000000000000011011
+	GPR_RA = 32'sb00000000000000000000000000011111
+	GPR_S0 = 32'sb00000000000000000000000000010000
+	GPR_S1 = 32'sb00000000000000000000000000010001
+	GPR_S2 = 32'sb00000000000000000000000000010010
+	GPR_S3 = 32'sb00000000000000000000000000010011
+	GPR_S4 = 32'sb00000000000000000000000000010100
+	GPR_S5 = 32'sb00000000000000000000000000010101
+	GPR_S6 = 32'sb00000000000000000000000000010110
+	GPR_S7 = 32'sb00000000000000000000000000010111
+	GPR_SP = 32'sb00000000000000000000000000011101
+	GPR_T0 = 32'sb00000000000000000000000000001000
+	GPR_T1 = 32'sb00000000000000000000000000001001
+	GPR_T2 = 32'sb00000000000000000000000000001010
+	GPR_T3 = 32'sb00000000000000000000000000001011
+	GPR_T4 = 32'sb00000000000000000000000000001100
+	GPR_T5 = 32'sb00000000000000000000000000001101
+	GPR_T6 = 32'sb00000000000000000000000000001110
+	GPR_T7 = 32'sb00000000000000000000000000001111
+	GPR_T8 = 32'sb00000000000000000000000000011000
+	GPR_T9 = 32'sb00000000000000000000000000011001
+	GPR_V0 = 32'sb00000000000000000000000000000010
+	GPR_V1 = 32'sb00000000000000000000000000000011
+	GPR_ZERO = 32'sb00000000000000000000000000000000
+	INST_ADDI = 6'b001000
+	INST_ANDI = 6'b001100
+	INST_BEQ = 6'b000100
+	INST_BNE = 6'b000101
+	INST_J = 6'b000010
+	INST_JAL = 6'b000011
+	INST_LW = 6'b100011
+	INST_ORI = 6'b001101
+	INST_R = 6'b000000
+	INST_SW = 6'b101011
+	PC_BEQ = 32'sb00000000000000000000000000000100
+	PC_BNE = 32'sb00000000000000000000000000000101
+	PC_JR = 32'sb00000000000000000000000000000010
+	PC_JUMP = 32'sb00000000000000000000000000000001
+	PC_NEXT = 32'sb00000000000000000000000000000000
+	PC_RESET = 32'b00000000000000000000000000000000
+	R_FUNC_ADD = 6'b100000
+	R_FUNC_AND = 6'b100100
+	R_FUNC_JR = 6'b001000
+	R_FUNC_OR = 6'b100101
+	R_FUNC_SLT = 6'b101010
+	R_FUNC_SUB = 6'b100010
+	WB_ADDR_LINK = 32'sb00000000000000000000000000000010
+	WB_ADDR_RD = 32'sb00000000000000000000000000000000
+	WB_ADDR_RT = 32'sb00000000000000000000000000000001
+	WB_DATA_ALU = 32'sb00000000000000000000000000000000
+	WB_DATA_MEM = 32'sb00000000000000000000000000000001
+Module <alu> is correct for synthesis.
+ 
+Analyzing module <inst_rom> in library <work>.
+	ADDR_WIDTH = 32'sb00000000000000000000000000000110
+INFO:Xst:2546 - "inst_rom.v" line 13: reading initialization file "inst_mem.hex".
+Module <inst_rom> is correct for synthesis.
+ 
+Analyzing module <data_ram> in library <work>.
+	ADDR_WIDTH = 32'sb00000000000000000000000000000101
+INFO:Xst:2546 - "data_ram.v" line 15: reading initialization file "data_mem.hex".
+Module <data_ram> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <strdata<71>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<70>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<69>> in unit <display> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<68>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<67>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<66>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<65>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<64>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<127>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<119>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<111>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<103>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <strdata<95>> in unit <display> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <rwlcd> in unit <lcd> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <homelcd> in unit <genlcd> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <anti_jitter_1>.
+    Related source file is "anti_jitter.v".
+    Found 1-bit register for signal <buff>.
+    Found 32-bit up counter for signal <clk_count>.
+    Found 1-bit xor2 for signal <clk_count$xor0000> created at line 31.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <anti_jitter_1> synthesized.
+
+
+Synthesizing Unit <anti_jitter_2>.
+    Related source file is "anti_jitter.v".
+    Found 1-bit register for signal <buff>.
+    Found 32-bit up counter for signal <clk_count>.
+    Found 1-bit xor2 for signal <clk_count$xor0000> created at line 31.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <anti_jitter_2> synthesized.
+
+
+Synthesizing Unit <anti_jitter_3>.
+    Related source file is "anti_jitter.v".
+    Found 1-bit register for signal <buff>.
+    Found 32-bit up counter for signal <clk_count>.
+    Found 1-bit xor2 for signal <clk_count$xor0000> created at line 31.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <anti_jitter_3> synthesized.
+
+
+Synthesizing Unit <lcd>.
+    Related source file is "displcd.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <$old_lcdstate_10> of Case statement line 182 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <$old_lcdstate_10> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <$old_lcdstate_10>.
+    Using one-hot encoding for signal <$old_lcdstate_13>.
+    Using one-hot encoding for signal <$old_lcdstate_17>.
+    Using one-hot encoding for signal <$old_lcdstate_21>.
+    Using one-hot encoding for signal <$old_lcdstate_25>.
+    Found 4-bit register for signal <lcdd>.
+    Found 1-bit register for signal <lcdhome>.
+    Found 1-bit register for signal <rslcd>.
+    Found 1-bit register for signal <elcd>.
+    Found 1-bit register for signal <lcdreset>.
+    Found 1-bit register for signal <lcdclear>.
+    Found 1-bit register for signal <lcddata>.
+    Found 1-bit register for signal <lcdaddr>.
+    Found 19-bit register for signal <lcdcount>.
+    Found 41-bit register for signal <lcdstate>.
+    Found 19-bit adder for signal <old_lcdcount_11$addsub0000> created at line 174.
+    Summary:
+	inferred  71 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <lcd> synthesized.
+
+
+Synthesizing Unit <genlcd>.
+    Related source file is "displcd.v".
+WARNING:Xst:647 - Input <lcdhome> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <gstate> of Case statement line 43 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <gstate> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_0> for signal <gstate>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 16                                             |
+    | Clock              | CCLK                      (rising_edge)        |
+    | Reset              | debpb0                    (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <addrlcd>.
+    Found 1-bit register for signal <initlcd>.
+    Found 1-bit register for signal <datalcd>.
+    Found 1-bit register for signal <clearlcd>.
+    Found 1-bit register for signal <resetlcd>.
+    Found 8-bit register for signal <lcddatin>.
+    Found 33-bit comparator less for signal <gstate$cmp_lt0000> created at line 125.
+    Found 32-bit register for signal <i>.
+    Found 33-bit comparator greater for signal <lcddatin$cmp_gt0000> created at line 86.
+    Found 32-bit subtractor for signal <old_i_28$sub0000> created at line 124.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  45 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <genlcd> synthesized.
+
+
+Synthesizing Unit <inst_rom>.
+    Related source file is "inst_rom.v".
+WARNING:Xst:1781 - Signal <data> is used but never assigned. Tied to default value.
+    Found 64x32-bit ROM for signal <$varindex0000> created at line 18.
+    Found 32-bit register for signal <out>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <inst_rom> synthesized.
+
+
+Synthesizing Unit <data_ram>.
+    Related source file is "data_ram.v".
+    Found 32x32-bit single-port RAM <Mram_data> for signal <data>.
+    Found 32-bit register for signal <out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <data_ram> synthesized.
+
+
+Synthesizing Unit <controller>.
+    Related source file is "controller.v".
+WARNING:Xst:647 - Input <wb_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <exe_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <if_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <id_valid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inst<15:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <debug_step_prev>.
+    Found 5-bit comparator equal for signal <reg_stall$cmp_eq0000> created at line 218.
+    Found 5-bit comparator equal for signal <reg_stall$cmp_eq0001> created at line 221.
+    Found 5-bit comparator equal for signal <reg_stall$cmp_eq0002> created at line 226.
+    Found 5-bit comparator equal for signal <reg_stall$cmp_eq0003> created at line 229.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <controller> synthesized.
+
+
+Synthesizing Unit <regfile>.
+    Related source file is "regfile.v".
+    Found 31x32-bit dual-port RAM <Mram_regfile> for signal <regfile>.
+    Found 31x32-bit dual-port RAM <Mram_regfile_ren> for signal <regfile>.
+    Found 31x32-bit dual-port RAM <Mram_regfile_ren_1> for signal <regfile>.
+    Summary:
+	inferred   3 RAM(s).
+Unit <regfile> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "alu.v".
+    Found 32-bit addsub for signal <result$addsub0000>.
+    Found 32-bit comparator less for signal <result$cmp_lt0000> created at line 26.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <clk_gen>.
+    Related source file is "clk_gen.v".
+Unit <clk_gen> synthesized.
+
+
+Synthesizing Unit <displcd>.
+    Related source file is "displcd.v".
+Unit <displcd> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "datapath.v".
+    Found 1-bit register for signal <wb_wen_mem>.
+    Found 1-bit register for signal <wb_valid>.
+    Found 32-bit register for signal <inst_data_id>.
+    Found 1-bit register for signal <exe_valid>.
+    Found 5-bit register for signal <regw_addr_exe>.
+    Found 1-bit register for signal <wb_wen_exe>.
+    Found 32-bit register for signal <inst_addr>.
+    Found 1-bit register for signal <mem_valid>.
+    Found 1-bit register for signal <id_valid>.
+    Found 5-bit register for signal <regw_addr_mem>.
+    Found 32-bit register for signal <alu_out_mem>.
+    Found 32-bit register for signal <alu_out_wb>.
+    Found 32-bit register for signal <data_imm_exe>.
+    Found 32-bit register for signal <data_rs_exe>.
+    Found 5-bit register for signal <data_rs_mem>.
+    Found 32-bit register for signal <data_rt_exe>.
+    Found 32-bit register for signal <data_rt_mem>.
+    Found 32-bit register for signal <debug_data_signal>.
+    Found 2-bit register for signal <exe_a_src_exe>.
+    Found 4-bit register for signal <exe_alu_oper_exe>.
+    Found 2-bit register for signal <exe_b_src_exe>.
+    Found 32-bit register for signal <inst_addr_exe>.
+    Found 32-bit register for signal <inst_addr_id>.
+    Found 32-bit register for signal <inst_addr_mem>.
+    Found 32-bit adder for signal <inst_addr_next$add0000> created at line 150.
+    Found 32-bit register for signal <inst_addr_next_exe>.
+    Found 32-bit register for signal <inst_addr_next_id>.
+    Found 32-bit register for signal <inst_addr_next_mem>.
+    Found 32-bit register for signal <inst_data_exe>.
+    Found 32-bit register for signal <inst_data_mem>.
+    Found 32-bit register for signal <mem_din_wb>.
+    Found 1-bit register for signal <mem_ren_exe>.
+    Found 1-bit register for signal <mem_ren_mem>.
+    Found 1-bit register for signal <mem_wen_exe>.
+    Found 1-bit register for signal <mem_wen_mem>.
+    Found 3-bit register for signal <pc_src_exe>.
+    Found 3-bit register for signal <pc_src_mem>.
+    Found 5-bit register for signal <regw_addr_wb>.
+    Found 32-bit comparator equal for signal <rs_rt_equal_exe>.
+    Found 1-bit register for signal <rs_rt_equal_mem>.
+    Found 1-bit register for signal <wb_data_src_exe>.
+    Found 1-bit register for signal <wb_data_src_mem>.
+    Found 1-bit register for signal <wb_data_src_wb>.
+    Found 1-bit register for signal <wb_wen_wb>.
+    Summary:
+	inferred 625 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <datapath> synthesized.
+
+
+Synthesizing Unit <display>.
+    Related source file is "display.v".
+WARNING:Xst:653 - Signal <strdata<255:128>> is used but never assigned. This sourceless signal will be automatically connected to value 00101010001000000100100001100101011011000110110001101111001000000101011101101111011100100110110001100100001000010010000000101010.
+    Register <strdata<125>> equivalent to <strdata<117>> has been removed
+    Register <strdata<126>> equivalent to <strdata<118>> has been removed
+    Found 8-bit register for signal <addr_buf>.
+    Found 32-bit register for signal <data_buf>.
+    Found 8-bit adder for signal <num2str$add0000> created at line 26.
+    Found 8-bit adder for signal <num2str$add0001> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0000> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0001> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0002> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0003> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0004> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0005> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0006> created at line 26.
+    Found 8-bit adder for signal <num2str$addsub0007> created at line 26.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0000> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0001> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0002> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0003> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0004> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0005> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0006> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0007> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0008> created at line 25.
+    Found 4-bit comparator less for signal <num2str$cmp_lt0009> created at line 25.
+    Found 1-bit register for signal <refresh>.
+    Found 8-bit comparator not equal for signal <refresh$cmp_ne0000> created at line 84.
+    Found 32-bit comparator not equal for signal <refresh$cmp_ne0001> created at line 84.
+    Found 5-bit register for signal <strdata<124:120>>.
+    Found 7-bit register for signal <strdata<118:112>>.
+    Found 7-bit register for signal <strdata<110:104>>.
+    Found 7-bit register for signal <strdata<102:96>>.
+    Found 23-bit register for signal <strdata<94:72>>.
+    Found 64-bit register for signal <strdata<63:0>>.
+    Found 6-bit adder carry out for signal <strdata_127_72$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_127_72$addsub0001> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_15_8$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_23_16$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_31_24$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_39_32$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_47_40$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_55_48$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_63_56$addsub0000> created at line 28.
+    Found 6-bit adder carry out for signal <strdata_7_0$addsub0000> created at line 28.
+    Summary:
+	inferred 154 D-type flip-flop(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <display> synthesized.
+
+
+Synthesizing Unit <mips_core>.
+    Related source file is "mips_core.v".
+WARNING:Xst:647 - Input <debug_addr<6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <mips_core> synthesized.
+
+
+Synthesizing Unit <mips>.
+    Related source file is "mips.v".
+WARNING:Xst:647 - Input <interrupter> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <mem_ren> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_addr<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <inst_ren> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <inst_addr<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <mips> synthesized.
+
+
+Synthesizing Unit <mips_top>.
+    Related source file is "mips_top.v".
+    Found 5-bit 4-to-1 multiplexer for signal <disp_addr>.
+    Found 5-bit updown counter for signal <disp_addr0>.
+    Found 5-bit updown counter for signal <disp_addr1>.
+    Found 5-bit updown counter for signal <disp_addr2>.
+    Found 5-bit updown counter for signal <disp_addr3>.
+    Found 1-bit register for signal <disp_next_buf>.
+    Found 1-bit register for signal <disp_prev_buf>.
+    Found 1-bit register for signal <rst_all>.
+    Found 16-bit register for signal <rst_count>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <mips_top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 31x32-bit dual-port RAM                               : 3
+ 32x32-bit single-port RAM                             : 1
+# ROMs                                                 : 1
+ 64x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 24
+ 19-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 1
+ 6-bit adder carry out                                 : 10
+ 8-bit adder                                           : 10
+# Counters                                             : 15
+ 32-bit up counter                                     : 11
+ 5-bit updown counter                                  : 4
+# Registers                                            : 196
+ 1-bit register                                        : 160
+ 16-bit register                                       : 1
+ 19-bit register                                       : 1
+ 2-bit register                                        : 2
+ 3-bit register                                        : 2
+ 32-bit register                                       : 22
+ 4-bit register                                        : 1
+ 41-bit register                                       : 1
+ 5-bit register                                        : 4
+ 8-bit register                                        : 2
+# Comparators                                          : 20
+ 32-bit comparator equal                               : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator not equal                           : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator less                                : 1
+ 4-bit comparator less                                 : 10
+ 5-bit comparator equal                                : 4
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 11
+ 1-bit xor2                                            : 11
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <DISPLAY/DISPLCD/M1/gstate/FSM> on signal <gstate[1:16]> with one-hot encoding.
+---------------------------
+ State | Encoding
+---------------------------
+ 0000  | 0000000000000001
+ 0001  | 0000000000000010
+ 0010  | 0000000000000100
+ 0011  | 0000000000001000
+ 0100  | 0000000000010000
+ 0101  | 0000000000100000
+ 0110  | 0000000001000000
+ 0111  | 0000000010000000
+ 1000  | 0000000100000000
+ 1001  | 0000001000000000
+ 1010  | 0000010000000000
+ 1011  | 0000100000000000
+ 1100  | 0001000000000000
+ 1101  | 0010000000000000
+ 1110  | 0100000000000000
+ 1111  | 1000000000000000
+---------------------------
+WARNING:Xst:1290 - Hierarchical block <AJ_ROTCTR> is unconnected in block <mips_top>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AJ_BTNE> is unconnected in block <mips_top>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AJ_BTNW> is unconnected in block <mips_top>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_16> in Unit <DATAPATH> is equivalent to the following 15 FFs/Latches, which will be removed : <data_imm_exe_17> <data_imm_exe_18> <data_imm_exe_19> <data_imm_exe_20> <data_imm_exe_21> <data_imm_exe_22> <data_imm_exe_23> <data_imm_exe_24> <data_imm_exe_25> <data_imm_exe_26> <data_imm_exe_27> <data_imm_exe_28> <data_imm_exe_29> <data_imm_exe_30> <data_imm_exe_31> 
+WARNING:Xst:1710 - FF/Latch <addr_buf_7> (without init value) has a constant value of 0 in block <DISPLAY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <exe_alu_oper_exe_3> (without init value) has a constant value of 0 in block <DATAPATH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <lcdstate_40> of sequential type is unconnected in block <M0>.
+
+Synthesizing (advanced) Unit <data_ram>.
+INFO:Xst:3226 - The RAM <Mram_data> will be implemented as a BLOCK RAM, absorbing the following register(s): <out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <din>           |          |
+    |     doA            | connected to signal <out>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <data_ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <inst_rom>.
+INFO:Xst:3044 - The ROM <Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <out>.
+INFO:Xst:3225 - The RAM <Mrom__varindex0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <out>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <inst_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <regfile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regfile> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <addr_w>        |          |
+    |     diA            | connected to signal <data_w>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     addrB          | connected to signal <addr_a>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regfile_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <addr_w>        |          |
+    |     diA            | connected to signal <data_w>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     addrB          | connected to signal <addr_b>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regfile_ren_1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <addr_w>        |          |
+    |     diA            | connected to signal <data_w>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 31-word x 32-bit                    |          |
+    |     addrB          | connected to signal <debug_addr>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <regfile> synthesized (advanced).
+WARNING:Xst:2677 - Node <lcdstate_40> of sequential type is unconnected in block <lcd>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 5
+ 31x32-bit dual-port distributed RAM                   : 3
+ 32x32-bit single-port block RAM                       : 1
+ 64x32-bit single-port block RAM                       : 1
+# Adders/Subtractors                                   : 24
+ 19-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 1
+ 6-bit adder carry out                                 : 10
+ 8-bit adder                                           : 10
+# Counters                                             : 15
+ 32-bit up counter                                     : 11
+ 5-bit updown counter                                  : 4
+# Registers                                            : 925
+ Flip-Flops                                            : 925
+# Comparators                                          : 20
+ 32-bit comparator equal                               : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator not equal                           : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator less                                : 1
+ 4-bit comparator less                                 : 10
+ 5-bit comparator equal                                : 4
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 11
+ 1-bit xor2                                            : 11
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_16> in Unit <datapath> is equivalent to the following 15 FFs/Latches, which will be removed : <data_imm_exe_17> <data_imm_exe_18> <data_imm_exe_19> <data_imm_exe_20> <data_imm_exe_21> <data_imm_exe_22> <data_imm_exe_23> <data_imm_exe_24> <data_imm_exe_25> <data_imm_exe_26> <data_imm_exe_27> <data_imm_exe_28> <data_imm_exe_29> <data_imm_exe_30> <data_imm_exe_31> 
+WARNING:Xst:1710 - FF/Latch <strdata_87> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_79> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_15> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_7> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_23> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_31> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_39> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_47> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_55> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <strdata_63> (without init value) has a constant value of 0 in block <display>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <inst_addr_id_1> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_addr_next_id_1> 
+INFO:Xst:2261 - The FF/Latch <inst_addr_id_0> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_addr_next_id_0> 
+INFO:Xst:2261 - The FF/Latch <inst_addr_exe_1> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_addr_next_exe_1> 
+INFO:Xst:2261 - The FF/Latch <inst_addr_exe_0> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_addr_next_exe_0> 
+INFO:Xst:2261 - The FF/Latch <inst_addr_mem_1> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_addr_next_mem_1> 
+INFO:Xst:2261 - The FF/Latch <inst_addr_mem_0> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_addr_next_mem_0> 
+INFO:Xst:2261 - The FF/Latch <strdata_44> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_45> 
+INFO:Xst:2261 - The FF/Latch <strdata_94> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_86> 
+INFO:Xst:2261 - The FF/Latch <strdata_93> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_85> 
+INFO:Xst:2261 - The FF/Latch <strdata_29> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_28> 
+INFO:Xst:2261 - The FF/Latch <strdata_12> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_13> 
+INFO:Xst:2261 - The FF/Latch <strdata_53> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_52> 
+INFO:Xst:2261 - The FF/Latch <strdata_37> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_36> 
+INFO:Xst:2261 - The FF/Latch <strdata_21> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_20> 
+INFO:Xst:2261 - The FF/Latch <strdata_5> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_4> 
+INFO:Xst:2261 - The FF/Latch <strdata_61> in Unit <display> is equivalent to the following FF/Latch, which will be removed : <strdata_60> 
+
+Optimizing unit <mips_top> ...
+
+Optimizing unit <anti_jitter_1> ...
+
+Optimizing unit <anti_jitter_2> ...
+
+Optimizing unit <anti_jitter_3> ...
+
+Optimizing unit <lcd> ...
+
+Optimizing unit <genlcd> ...
+WARNING:Xst:1710 - FF/Latch <i_0> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_1> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_2> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <inst_rom> ...
+
+Optimizing unit <data_ram> ...
+
+Optimizing unit <controller> ...
+
+Optimizing unit <regfile> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <clk_gen> ...
+
+Optimizing unit <displcd> ...
+
+Optimizing unit <datapath> ...
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_7> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_7> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_13> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_13> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_1> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_1> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_6> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_6> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_12> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_12> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_0> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_0> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_5> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_5> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_11> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_11> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_4> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_4> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_10> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_10> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_9> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_9> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_15> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_15> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_3> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_3> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_8> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_8> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_14> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_14> 
+INFO:Xst:2261 - The FF/Latch <data_imm_exe_2> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_data_exe_2> 
+
+Optimizing unit <display> ...
+
+Optimizing unit <mips_core> ...
+
+Optimizing unit <mips> ...
+WARNING:Xst:1710 - FF/Latch <addr_buf_7> (without init value) has a constant value of 0 in block <DISPLAY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcdhome> (without init value) has a constant value of 0 in block <M0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcddatin_7> (without init value) has a constant value of 0 in block <M1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <exe_alu_oper_exe_3> (without init value) has a constant value of 0 in block <DATAPATH>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <AJ_BTNW> is unconnected in block <mips_top>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AJ_BTNE> is unconnected in block <mips_top>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <AJ_ROTCTR> is unconnected in block <mips_top>.
+   It will be removed from the design.
+WARNING:Xst:2677 - Node <id_valid> of sequential type is unconnected in block <DATAPATH>.
+WARNING:Xst:2677 - Node <exe_valid> of sequential type is unconnected in block <DATAPATH>.
+WARNING:Xst:2677 - Node <mem_valid> of sequential type is unconnected in block <DATAPATH>.
+WARNING:Xst:2677 - Node <wb_valid> of sequential type is unconnected in block <DATAPATH>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips_top, actual ratio is 37.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1144
+ Flip-Flops                                            : 1144
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mips_top.ngr
+Top Level Output File Name         : mips_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Soft
+
+Design Statistics
+# IOs                              : 27
+
+Cell Usage :
+# BELS                             : 3779
+#      GND                         : 16
+#      INV                         : 247
+#      LUT1                        : 295
+#      LUT2                        : 187
+#      LUT2_D                      : 6
+#      LUT2_L                      : 8
+#      LUT3                        : 385
+#      LUT3_D                      : 7
+#      LUT3_L                      : 10
+#      LUT4                        : 1269
+#      LUT4_D                      : 37
+#      LUT4_L                      : 64
+#      MUXCY                       : 815
+#      MUXF5                       : 51
+#      VCC                         : 16
+#      XORCY                       : 366
+# FlipFlops/Latches                : 1144
+#      FD                          : 217
+#      FDE                         : 39
+#      FDR                         : 281
+#      FDRE                        : 580
+#      FDRS                        : 3
+#      FDRSE                       : 3
+#      FDS                         : 21
+# RAMS                             : 194
+#      RAM16X1D                    : 192
+#      RAMB16_S36                  : 2
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 24
+#      IBUF                        : 8
+#      IBUFG                       : 1
+#      OBUF                        : 15
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1642  out of   4656    35%  
+ Number of Slice Flip Flops:           1144  out of   9312    12%  
+ Number of 4 input LUTs:               2899  out of   9312    31%  
+    Number used as logic:              2515
+    Number used as RAMs:                384
+ Number of IOs:                          27
+ Number of bonded IOBs:                  24  out of    232    10%  
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of GCLKs:                         4  out of     24    16%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CCLK                               | DCM_SYS:CLKFX          | 816   |
+CCLK                               | DCM_SYS:CLK0           | 522   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 20.431ns (Maximum Frequency: 48.945MHz)
+   Minimum input arrival time before clock: 4.661ns
+   Maximum output required time after clock: 5.148ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CCLK'
+  Clock period: 20.431ns (frequency: 48.945MHz)
+  Total number of paths / destination ports: 9629650 / 4603
+-------------------------------------------------------------------------
+Delay:               20.431ns (Levels of Logic = 30)
+  Source:            DISPLAY/DISPLCD/M0/lcdcount_1 (FF)
+  Destination:       DISPLAY/DISPLCD/M0/lcdstate_7 (FF)
+  Source Clock:      CCLK rising
+  Destination Clock: CCLK rising
+
+  Data Path: DISPLAY/DISPLCD/M0/lcdcount_1 to DISPLAY/DISPLCD/M0/lcdstate_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.595  lcdcount_1 (lcdcount_1)
+     LUT1:I0->O            1   0.704   0.000  Madd_old_lcdcount_11_addsub0000_cy<1>_rt (Madd_old_lcdcount_11_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_old_lcdcount_11_addsub0000_cy<1> (Madd_old_lcdcount_11_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<2> (Madd_old_lcdcount_11_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<3> (Madd_old_lcdcount_11_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<4> (Madd_old_lcdcount_11_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<5> (Madd_old_lcdcount_11_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<6> (Madd_old_lcdcount_11_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<7> (Madd_old_lcdcount_11_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<8> (Madd_old_lcdcount_11_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<9> (Madd_old_lcdcount_11_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<10> (Madd_old_lcdcount_11_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<11> (Madd_old_lcdcount_11_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<12> (Madd_old_lcdcount_11_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<13> (Madd_old_lcdcount_11_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<14> (Madd_old_lcdcount_11_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_old_lcdcount_11_addsub0000_cy<15> (Madd_old_lcdcount_11_addsub0000_cy<15>)
+     XORCY:CI->O           6   0.804   0.673  Madd_old_lcdcount_11_addsub0000_xor<16> (old_lcdcount_11_addsub0000<16>)
+     LUT4:I3->O           14   0.704   1.004  old_lcdstate_13_cmp_eq0000122 (old_lcdstate_13_cmp_eq0000122)
+     LUT4:I3->O            1   0.704   0.000  old_lcdstate_13_cmp_eq00021_SW2_G (N576)
+     MUXF5:I1->O           1   0.321   0.424  old_lcdstate_13_cmp_eq00021_SW2 (N396)
+     LUT4_D:I3->LO         1   0.704   0.104  _old_lcdcount_14<4>12_SW0_SW0 (N643)
+     LUT4:I3->O            6   0.704   0.673  _old_lcdcount_14<4>12 (N96)
+     LUT4_D:I3->O          5   0.704   0.637  lcdstate_mux0000<32>3_SW0 (N124)
+     LUT4_D:I3->O          8   0.704   0.761  lcdstate_mux0000<32>3 (N54)
+     LUT4:I3->O            7   0.704   0.712  _old_lcdstate_21<6>1 (_old_lcdstate_21<6>)
+     LUT4:I3->O            4   0.704   0.666  _old_lcdcount_26<5>11 (N751)
+     LUT4:I1->O           15   0.704   1.021  _old_lcdcount_26<6> (_old_lcdcount_26<6>)
+     LUT4_D:I3->O          4   0.704   0.591  lcdstate_cmp_eq000031 (N691)
+     LUT4_L:I3->LO         1   0.704   0.104  lcdstate_mux0000<33>_SW0 (N132)
+     LUT4:I3->O            1   0.704   0.000  lcdstate_mux0000<33> (lcdstate_mux0000<33>)
+     FD:D                      0.308          lcdstate_7
+    ----------------------------------------
+    Total                     20.431ns (12.466ns logic, 7.965ns route)
+                                       (61.0% logic, 39.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CCLK'
+  Total number of paths / destination ports: 272 / 272
+-------------------------------------------------------------------------
+Offset:              4.661ns (Levels of Logic = 3)
+  Source:            BTNS (PAD)
+  Destination:       AJ_BTNS/clk_count_0 (FF)
+  Destination Clock: CCLK rising
+
+  Data Path: BTNS to AJ_BTNS/clk_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.566  BTNS_IBUF (BTNS_IBUF)
+     begin scope: 'AJ_BTNS'
+     LUT3:I2->O           32   0.704   1.262  clk_count_or00001 (clk_count_or0000)
+     FDR:R                     0.911          clk_count_0
+    ----------------------------------------
+    Total                      4.661ns (2.833ns logic, 1.828ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CCLK'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              5.148ns (Levels of Logic = 2)
+  Source:            AJ_SW0/buff (FF)
+  Destination:       LED<0> (PAD)
+  Source Clock:      CCLK rising
+
+  Data Path: AJ_SW0/buff to LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q           104   0.591   1.285  buff (buff)
+     end scope: 'AJ_SW0'
+     OBUF:I->O                 3.272          LED_0_OBUF (LED<0>)
+    ----------------------------------------
+    Total                      5.148ns (3.863ns logic, 1.285ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 43.00 secs
+Total CPU time to Xst completion: 43.02 secs
+ 
+--> 
+
+Total memory usage is 399736 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :   60 (   0 filtered)
+

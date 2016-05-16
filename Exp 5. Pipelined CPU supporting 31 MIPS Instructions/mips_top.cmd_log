@@ -1,0 +1,78 @@
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPU/mips_top.xst" -ofn "C:/Arch/PipelinedCPU/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPU/mips_top.xst" -ofn "C:/Arch/PipelinedCPU/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPU/mips_top.xst" -ofn "C:/Arch/PipelinedCPU/mips_top.syr" 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPU/mips_top.xst" -ofn "C:/Arch/PipelinedCPU/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPUwithFwd/mips_top.xst" -ofn "C:/Arch/PipelinedCPUwithFwd/mips_top.syr" 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPUwithFwd/mips_top.xst" -ofn "C:/Arch/PipelinedCPUwithFwd/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPUwithFwd/mips_top.xst" -ofn "C:/Arch/PipelinedCPUwithFwd/mips_top.syr" 
+xst -intstyle ise -ifn "C:/Arch/PipelinedCPUwithFwd/mips_top.xst" -ofn "C:/Arch/PipelinedCPUwithFwd/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.xst" -ofn "Z:/Arch/PipelinedCPUresolvedCtrlHzd/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPU_31instructions/mips_top.xst" -ofn "Z:/Arch/PipelinedCPU_31instructions/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPU_31instructions/mips_top.xst" -ofn "Z:/Arch/PipelinedCPU_31instructions/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPU_31instructions/mips_top.xst" -ofn "Z:/Arch/PipelinedCPU_31instructions/mips_top.syr" 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPU_31instructions/mips_top.xst" -ofn "Z:/Arch/PipelinedCPU_31instructions/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 
+xst -intstyle ise -ifn "Z:/Arch/PipelinedCPU_31instructions/mips_top.xst" -ofn "Z:/Arch/PipelinedCPU_31instructions/mips_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4 mips_top.ngc mips_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mips_top_map.ncd mips_top.ngd mips_top.pcf 
+par -w -intstyle ise -ol high -t 1 mips_top_map.ncd mips_top.ncd mips_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf -ucf mips_top.ucf 
+bitgen -intstyle ise -f mips_top.ut mips_top.ncd 

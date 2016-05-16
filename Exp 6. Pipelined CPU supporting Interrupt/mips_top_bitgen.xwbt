@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Arch\PipelinedCPU_31instructions\mips_top.ncd
+OUTFILE=Z:\Arch\PipelinedCPU_31instructions\mips_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=Z:\Arch\PipelinedCPU_31instructions
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

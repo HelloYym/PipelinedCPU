@@ -1,0 +1,1417 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml mips_top.twx mips_top.ncd -o mips_top.twr mips_top.pcf
+-ucf mips_top.ucf
+
+Design file:              mips_top.ncd
+Physical constraint file: mips_top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   7.500ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+Slack: 6.786ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.214ns (311.139MHz) (Tdcmpco)
+  Physical resource: CLK_GEN/DCM_SYS/CLK2X
+  Logical resource: CLK_GEN/DCM_SYS/CLK2X
+  Location pin: DCM_X0Y1.CLK2X
+  Clock network: CLK_GEN/clk_100m_unbuf
+--------------------------------------------------------------------------------
+Slack: 12.500ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: CLK_GEN/DCM_SYS/CLKIN
+  Logical resource: CLK_GEN/DCM_SYS/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: CCLK_IBUFG
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 12.000ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: CLK_GEN/DCM_SYS/CLKIN
+  Logical resource: CLK_GEN/DCM_SYS/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: CCLK_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "CLK_GEN/clk_50m_unbuf" derived from 
+ NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;  duty cycle corrected to 20 nS  HIGH 
+10 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 9542059 paths analyzed, 1977 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.822ns.
+--------------------------------------------------------------------------------
+
+Paths for end point DISPLAY/DISPLCD/M0/lcdstate_6 (SLICE_X16Y11.SR), 322668 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.178ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_11 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdstate_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.818ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.004ns (0.012 - 0.016)
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_11 to DISPLAY/DISPLCD/M0/lcdstate_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y16.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<11>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_11
+    SLICE_X1Y18.G3       net (fanout=1)        1.519   DISPLAY/DISPLCD/M0/lcdcount<11>
+    SLICE_X1Y18.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<11>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<17>
+    SLICE_X3Y20.F4       net (fanout=9)        0.387   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<17>
+    SLICE_X3Y20.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X0Y21.BX       net (fanout=17)       0.773   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X0Y21.X        Tbxx                  0.806   DISPLAY/DISPLCD/M0/N4011
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq00021_SW2
+    SLICE_X0Y23.G3       net (fanout=1)        0.268   DISPLAY/DISPLCD/M0/N4011
+    SLICE_X0Y23.Y        Tilo                  0.759   DISPLAY/DISPLCD/M0/N96
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_14<4>12_SW0_SW0
+    SLICE_X3Y24.F2       net (fanout=5)        1.089   DISPLAY/DISPLCD/M0/N292
+    SLICE_X3Y24.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N489
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_17_cmp_eq000011_SW0_SW0
+    SLICE_X12Y20.F2      net (fanout=1)        0.950   DISPLAY/DISPLCD/M0/N489
+    SLICE_X12Y20.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N54
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>3
+    SLICE_X14Y21.F1      net (fanout=9)        0.872   DISPLAY/DISPLCD/M0/N54
+    SLICE_X14Y21.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N99
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_21<3>31
+    SLICE_X15Y22.F2      net (fanout=5)        0.761   DISPLAY/DISPLCD/M0/N99
+    SLICE_X15Y22.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/N751
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_26<5>11
+    SLICE_X14Y14.F3      net (fanout=5)        0.565   DISPLAY/DISPLCD/M0/N751
+    SLICE_X14Y14.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdcount<17>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_26<17>
+    SLICE_X16Y12.G1      net (fanout=10)       0.706   DISPLAY/DISPLCD/M0/_old_lcdcount_26<17>
+    SLICE_X16Y12.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20_SW0
+    SLICE_X16Y12.F4      net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20_SW0/O
+    SLICE_X16Y12.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+    SLICE_X16Y11.SR      net (fanout=1)        0.826   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+    SLICE_X16Y11.CLK     Tsrck                 0.910   DISPLAY/DISPLCD/M0/lcdstate<6>
+                                                       DISPLAY/DISPLCD/M0/lcdstate_6
+    -------------------------------------------------  ---------------------------
+    Total                                     19.818ns (11.079ns logic, 8.739ns route)
+                                                       (55.9% logic, 44.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.182ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_11 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdstate_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.814ns (Levels of Logic = 12)
+  Clock Path Skew:      -0.004ns (0.012 - 0.016)
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_11 to DISPLAY/DISPLCD/M0/lcdstate_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y16.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<11>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_11
+    SLICE_X1Y18.G3       net (fanout=1)        1.519   DISPLAY/DISPLCD/M0/lcdcount<11>
+    SLICE_X1Y18.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<11>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<13>
+    SLICE_X0Y9.F3        net (fanout=12)       0.863   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<13>
+    SLICE_X0Y9.X         Tilo                  0.759   DISPLAY/DISPLCD/M0/N396
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_14<11>11_SW0_SW1_SW1
+    SLICE_X3Y17.F3       net (fanout=1)        0.814   DISPLAY/DISPLCD/M0/N396
+    SLICE_X3Y17.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N329
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_14<11>11_SW0_SW2
+    SLICE_X2Y19.F2       net (fanout=20)       0.436   DISPLAY/DISPLCD/M0/N329
+    SLICE_X2Y19.X        Tilo                  0.759   DISPLAY/DISPLCD/M0/N339
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_14<4>39_SW0
+    SLICE_X3Y24.F1       net (fanout=3)        0.683   DISPLAY/DISPLCD/M0/N339
+    SLICE_X3Y24.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N489
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_17_cmp_eq000011_SW0_SW0
+    SLICE_X12Y20.F2      net (fanout=1)        0.950   DISPLAY/DISPLCD/M0/N489
+    SLICE_X12Y20.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N54
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>3
+    SLICE_X14Y21.F1      net (fanout=9)        0.872   DISPLAY/DISPLCD/M0/N54
+    SLICE_X14Y21.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N99
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_21<3>31
+    SLICE_X15Y22.F2      net (fanout=5)        0.761   DISPLAY/DISPLCD/M0/N99
+    SLICE_X15Y22.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/N751
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_26<5>11
+    SLICE_X14Y14.F3      net (fanout=5)        0.565   DISPLAY/DISPLCD/M0/N751
+    SLICE_X14Y14.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdcount<17>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_26<17>
+    SLICE_X16Y12.G1      net (fanout=10)       0.706   DISPLAY/DISPLCD/M0/_old_lcdcount_26<17>
+    SLICE_X16Y12.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20_SW0
+    SLICE_X16Y12.F4      net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20_SW0/O
+    SLICE_X16Y12.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+    SLICE_X16Y11.SR      net (fanout=1)        0.826   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+    SLICE_X16Y11.CLK     Tsrck                 0.910   DISPLAY/DISPLCD/M0/lcdstate<6>
+                                                       DISPLAY/DISPLCD/M0/lcdstate_6
+    -------------------------------------------------  ---------------------------
+    Total                                     19.814ns (10.796ns logic, 9.018ns route)
+                                                       (54.5% logic, 45.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.217ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_11 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdstate_6 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.779ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.004ns (0.012 - 0.016)
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_11 to DISPLAY/DISPLCD/M0/lcdstate_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y16.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<11>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_11
+    SLICE_X1Y18.G3       net (fanout=1)        1.519   DISPLAY/DISPLCD/M0/lcdcount<11>
+    SLICE_X1Y18.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<11>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<17>
+    SLICE_X3Y20.F4       net (fanout=9)        0.387   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<17>
+    SLICE_X3Y20.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X0Y21.BX       net (fanout=17)       0.773   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X0Y21.X        Tbxx                  0.806   DISPLAY/DISPLCD/M0/N4011
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq00021_SW2
+    SLICE_X0Y23.G3       net (fanout=1)        0.268   DISPLAY/DISPLCD/M0/N4011
+    SLICE_X0Y23.Y        Tilo                  0.759   DISPLAY/DISPLCD/M0/N96
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_14<4>12_SW0_SW0
+    SLICE_X3Y24.F2       net (fanout=5)        1.089   DISPLAY/DISPLCD/M0/N292
+    SLICE_X3Y24.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N489
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_17_cmp_eq000011_SW0_SW0
+    SLICE_X12Y20.F2      net (fanout=1)        0.950   DISPLAY/DISPLCD/M0/N489
+    SLICE_X12Y20.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N54
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>3
+    SLICE_X14Y21.F1      net (fanout=9)        0.872   DISPLAY/DISPLCD/M0/N54
+    SLICE_X14Y21.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N99
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_21<3>31
+    SLICE_X15Y22.F2      net (fanout=5)        0.761   DISPLAY/DISPLCD/M0/N99
+    SLICE_X15Y22.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/N751
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_26<5>11
+    SLICE_X14Y15.F2      net (fanout=5)        0.603   DISPLAY/DISPLCD/M0/N751
+    SLICE_X14Y15.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdcount_26<6>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_26<6>
+    SLICE_X16Y12.G3      net (fanout=14)       0.629   DISPLAY/DISPLCD/M0/_old_lcdcount_26<6>
+    SLICE_X16Y12.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20_SW0
+    SLICE_X16Y12.F4      net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20_SW0/O
+    SLICE_X16Y12.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+    SLICE_X16Y11.SR      net (fanout=1)        0.826   DISPLAY/DISPLCD/M0/lcdstate_mux0000<34>20
+    SLICE_X16Y11.CLK     Tsrck                 0.910   DISPLAY/DISPLCD/M0/lcdstate<6>
+                                                       DISPLAY/DISPLCD/M0/lcdstate_6
+    -------------------------------------------------  ---------------------------
+    Total                                     19.779ns (11.079ns logic, 8.700ns route)
+                                                       (56.0% logic, 44.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DISPLAY/DISPLCD/M0/lcdcount_4 (SLICE_X2Y17.F3), 293694 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.278ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_5 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdcount_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.722ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_5 to DISPLAY/DISPLCD/M0/lcdcount_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y18.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<5>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_5
+    SLICE_X1Y15.G4       net (fanout=1)        1.028   DISPLAY/DISPLCD/M0/lcdcount<5>
+    SLICE_X1Y15.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<5>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<5>
+    SLICE_X1Y16.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<5>
+    SLICE_X1Y16.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<6>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<6>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<11>
+    SLICE_X3Y14.G1       net (fanout=16)       0.854   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<11>
+    SLICE_X3Y14.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdstate_13<1>14
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000211
+    SLICE_X3Y12.G1       net (fanout=5)        0.771   DISPLAY/DISPLCD/M0/N631
+    SLICE_X3Y12.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1
+    SLICE_X3Y12.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1/O
+    SLICE_X3Y12.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>_SW0
+    SLICE_X3Y11.G2       net (fanout=2)        0.344   DISPLAY/DISPLCD/M0/N78
+    SLICE_X3Y11.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N306
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.G1      net (fanout=5)        3.087   DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/N476
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>_SW0_SW0
+    SLICE_X15Y18.F4      net (fanout=5)        0.059   DISPLAY/DISPLCD/M0/N237
+    SLICE_X15Y18.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X17Y19.F2      net (fanout=17)       0.599   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X17Y19.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/N474
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_25_cmp_eq000211_SW0_SW0
+    SLICE_X16Y17.G2      net (fanout=1)        0.398   DISPLAY/DISPLCD/M0/N474
+    SLICE_X16Y17.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>_SW0
+    SLICE_X16Y17.F3      net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>_SW0/O
+    SLICE_X16Y17.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+    SLICE_X2Y17.G4       net (fanout=7)        1.719   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+    SLICE_X2Y17.Y        Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdcount<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>_SW0_SW0_SW0
+    SLICE_X2Y17.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>_SW0_SW0_SW0/O
+    SLICE_X2Y17.CLK      Tfck                  0.892   DISPLAY/DISPLCD/M0/lcdcount<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.722ns (10.794ns logic, 8.928ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.296ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_6 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdcount_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.704ns (Levels of Logic = 14)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_6 to DISPLAY/DISPLCD/M0/lcdcount_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y17.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<6>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_6
+    SLICE_X1Y16.F3       net (fanout=1)        0.967   DISPLAY/DISPLCD/M0/lcdcount<6>
+    SLICE_X1Y16.COUT     Topcyf                1.162   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<6>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<6>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<6>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<11>
+    SLICE_X3Y14.G1       net (fanout=16)       0.854   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<11>
+    SLICE_X3Y14.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdstate_13<1>14
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000211
+    SLICE_X3Y12.G1       net (fanout=5)        0.771   DISPLAY/DISPLCD/M0/N631
+    SLICE_X3Y12.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1
+    SLICE_X3Y12.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1/O
+    SLICE_X3Y12.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>_SW0
+    SLICE_X3Y11.G2       net (fanout=2)        0.344   DISPLAY/DISPLCD/M0/N78
+    SLICE_X3Y11.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N306
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.G1      net (fanout=5)        3.087   DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/N476
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>_SW0_SW0
+    SLICE_X15Y18.F4      net (fanout=5)        0.059   DISPLAY/DISPLCD/M0/N237
+    SLICE_X15Y18.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X17Y19.F2      net (fanout=17)       0.599   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X17Y19.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/N474
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_25_cmp_eq000211_SW0_SW0
+    SLICE_X16Y17.G2      net (fanout=1)        0.398   DISPLAY/DISPLCD/M0/N474
+    SLICE_X16Y17.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>_SW0
+    SLICE_X16Y17.F3      net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>_SW0/O
+    SLICE_X16Y17.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+    SLICE_X2Y17.G4       net (fanout=7)        1.719   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+    SLICE_X2Y17.Y        Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdcount<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>_SW0_SW0_SW0
+    SLICE_X2Y17.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>_SW0_SW0_SW0/O
+    SLICE_X2Y17.CLK      Tfck                  0.892   DISPLAY/DISPLCD/M0/lcdcount<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.704ns (10.837ns logic, 8.867ns route)
+                                                       (55.0% logic, 45.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.353ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_11 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdcount_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.647ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_11 to DISPLAY/DISPLCD/M0/lcdcount_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y16.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<11>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_11
+    SLICE_X1Y18.G3       net (fanout=1)        1.519   DISPLAY/DISPLCD/M0/lcdcount<11>
+    SLICE_X1Y18.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<11>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<17>
+    SLICE_X3Y20.F4       net (fanout=9)        0.387   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<17>
+    SLICE_X3Y20.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X3Y12.G3       net (fanout=17)       0.672   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X3Y12.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1
+    SLICE_X3Y12.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1/O
+    SLICE_X3Y12.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>_SW0
+    SLICE_X3Y11.G2       net (fanout=2)        0.344   DISPLAY/DISPLCD/M0/N78
+    SLICE_X3Y11.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N306
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.G1      net (fanout=5)        3.087   DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/N476
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>_SW0_SW0
+    SLICE_X15Y18.F4      net (fanout=5)        0.059   DISPLAY/DISPLCD/M0/N237
+    SLICE_X15Y18.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X17Y19.F2      net (fanout=17)       0.599   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X17Y19.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/N474
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_25_cmp_eq000211_SW0_SW0
+    SLICE_X16Y17.G2      net (fanout=1)        0.398   DISPLAY/DISPLCD/M0/N474
+    SLICE_X16Y17.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>_SW0
+    SLICE_X16Y17.F3      net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>_SW0/O
+    SLICE_X16Y17.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+    SLICE_X2Y17.G4       net (fanout=7)        1.719   DISPLAY/DISPLCD/M0/_old_lcdstate_25<3>
+    SLICE_X2Y17.Y        Tilo                  0.759   DISPLAY/DISPLCD/M0/lcdcount<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>_SW0_SW0_SW0
+    SLICE_X2Y17.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>_SW0_SW0_SW0/O
+    SLICE_X2Y17.CLK      Tfck                  0.892   DISPLAY/DISPLCD/M0/lcdcount<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_mux0000<14>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.647ns (10.794ns logic, 8.853ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DISPLAY/DISPLCD/M0/lcdstate_8 (SLICE_X12Y14.F4), 400792 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.281ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_5 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdstate_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.716ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.003ns (0.002 - 0.005)
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_5 to DISPLAY/DISPLCD/M0/lcdstate_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y18.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<5>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_5
+    SLICE_X1Y15.G4       net (fanout=1)        1.028   DISPLAY/DISPLCD/M0/lcdcount<5>
+    SLICE_X1Y15.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<4>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<5>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<5>
+    SLICE_X1Y16.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<5>
+    SLICE_X1Y16.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<6>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<6>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<11>
+    SLICE_X3Y14.G1       net (fanout=16)       0.854   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<11>
+    SLICE_X3Y14.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdstate_13<1>14
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000211
+    SLICE_X3Y12.G1       net (fanout=5)        0.771   DISPLAY/DISPLCD/M0/N631
+    SLICE_X3Y12.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1
+    SLICE_X3Y12.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1/O
+    SLICE_X3Y12.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>_SW0
+    SLICE_X3Y11.G2       net (fanout=2)        0.344   DISPLAY/DISPLCD/M0/N78
+    SLICE_X3Y11.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N306
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.G1      net (fanout=5)        3.087   DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/N476
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>_SW0_SW0
+    SLICE_X15Y18.F4      net (fanout=5)        0.059   DISPLAY/DISPLCD/M0/N237
+    SLICE_X15Y18.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X14Y17.G1      net (fanout=17)       0.633   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X14Y17.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/N472
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_25_cmp_eq000011
+    SLICE_X16Y21.F4      net (fanout=8)        0.681   DISPLAY/DISPLCD/M0/N671
+    SLICE_X16Y21.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N150
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>8_SW1
+    SLICE_X13Y17.G2      net (fanout=1)        1.175   DISPLAY/DISPLCD/M0/N150
+    SLICE_X13Y17.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>8
+    SLICE_X13Y17.F4      net (fanout=3)        0.051   DISPLAY/DISPLCD/M0/N119
+    SLICE_X13Y17.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+    SLICE_X12Y14.F4      net (fanout=1)        0.271   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+    SLICE_X12Y14.CLK     Tfck                  0.892   DISPLAY/DISPLCD/M0/lcdstate<8>
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>166
+                                                       DISPLAY/DISPLCD/M0/lcdstate_8
+    -------------------------------------------------  ---------------------------
+    Total                                     19.716ns (10.739ns logic, 8.977ns route)
+                                                       (54.5% logic, 45.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.302ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_6 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdstate_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.698ns (Levels of Logic = 14)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_6 to DISPLAY/DISPLCD/M0/lcdstate_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y17.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<6>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_6
+    SLICE_X1Y16.F3       net (fanout=1)        0.967   DISPLAY/DISPLCD/M0/lcdcount<6>
+    SLICE_X1Y16.COUT     Topcyf                1.162   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<6>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<6>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<6>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<7>
+    SLICE_X1Y17.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<8>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<9>
+    SLICE_X1Y18.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<10>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<11>
+    SLICE_X3Y14.G1       net (fanout=16)       0.854   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<11>
+    SLICE_X3Y14.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdstate_13<1>14
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000211
+    SLICE_X3Y12.G1       net (fanout=5)        0.771   DISPLAY/DISPLCD/M0/N631
+    SLICE_X3Y12.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1
+    SLICE_X3Y12.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1/O
+    SLICE_X3Y12.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>_SW0
+    SLICE_X3Y11.G2       net (fanout=2)        0.344   DISPLAY/DISPLCD/M0/N78
+    SLICE_X3Y11.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N306
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.G1      net (fanout=5)        3.087   DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/N476
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>_SW0_SW0
+    SLICE_X15Y18.F4      net (fanout=5)        0.059   DISPLAY/DISPLCD/M0/N237
+    SLICE_X15Y18.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X14Y17.G1      net (fanout=17)       0.633   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X14Y17.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/N472
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_25_cmp_eq000011
+    SLICE_X16Y21.F4      net (fanout=8)        0.681   DISPLAY/DISPLCD/M0/N671
+    SLICE_X16Y21.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N150
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>8_SW1
+    SLICE_X13Y17.G2      net (fanout=1)        1.175   DISPLAY/DISPLCD/M0/N150
+    SLICE_X13Y17.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>8
+    SLICE_X13Y17.F4      net (fanout=3)        0.051   DISPLAY/DISPLCD/M0/N119
+    SLICE_X13Y17.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+    SLICE_X12Y14.F4      net (fanout=1)        0.271   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+    SLICE_X12Y14.CLK     Tfck                  0.892   DISPLAY/DISPLCD/M0/lcdstate<8>
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>166
+                                                       DISPLAY/DISPLCD/M0/lcdstate_8
+    -------------------------------------------------  ---------------------------
+    Total                                     19.698ns (10.782ns logic, 8.916ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.359ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               DISPLAY/DISPLCD/M0/lcdcount_11 (FF)
+  Destination:          DISPLAY/DISPLCD/M0/lcdstate_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.641ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 0.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: DISPLAY/DISPLCD/M0/lcdcount_11 to DISPLAY/DISPLCD/M0/lcdstate_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y16.XQ      Tcko                  0.591   DISPLAY/DISPLCD/M0/lcdcount<11>
+                                                       DISPLAY/DISPLCD/M0/lcdcount_11
+    SLICE_X1Y18.G3       net (fanout=1)        1.519   DISPLAY/DISPLCD/M0/lcdcount<11>
+    SLICE_X1Y18.COUT     Topcyg                1.001   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<10>
+                                                       DISPLAY/DISPLCD/M0/lcdcount<11>_rt
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<11>
+    SLICE_X1Y19.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<12>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<13>
+    SLICE_X1Y20.COUT     Tbyp                  0.118   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<14>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.CIN      net (fanout=1)        0.000   DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<15>
+    SLICE_X1Y21.Y        Tciny                 0.869   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_cy<16>
+                                                       DISPLAY/DISPLCD/M0/Madd_old_lcdcount_11_addsub0000_xor<17>
+    SLICE_X3Y20.F4       net (fanout=9)        0.387   DISPLAY/DISPLCD/M0/old_lcdcount_11_addsub0000<17>
+    SLICE_X3Y20.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X3Y12.G3       net (fanout=17)       0.672   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq0000140
+    SLICE_X3Y12.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1
+    SLICE_X3Y12.F3       net (fanout=1)        0.023   DISPLAY/DISPLCD/M0/old_lcdstate_13_cmp_eq000021_SW1/O
+    SLICE_X3Y12.X        Tilo                  0.704   DISPLAY/DISPLCD/M0/N78
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>_SW0
+    SLICE_X3Y11.G2       net (fanout=2)        0.344   DISPLAY/DISPLCD/M0/N78
+    SLICE_X3Y11.Y        Tilo                  0.704   DISPLAY/DISPLCD/M0/N306
+                                                       DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.G1      net (fanout=5)        3.087   DISPLAY/DISPLCD/M0/_old_lcdstate_13<6>
+    SLICE_X15Y19.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/N476
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>_SW0_SW0
+    SLICE_X15Y18.F4      net (fanout=5)        0.059   DISPLAY/DISPLCD/M0/N237
+    SLICE_X15Y18.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+                                                       DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X14Y17.G1      net (fanout=17)       0.633   DISPLAY/DISPLCD/M0/_old_lcdcount_18<11>
+    SLICE_X14Y17.Y       Tilo                  0.759   DISPLAY/DISPLCD/M0/N472
+                                                       DISPLAY/DISPLCD/M0/old_lcdstate_25_cmp_eq000011
+    SLICE_X16Y21.F4      net (fanout=8)        0.681   DISPLAY/DISPLCD/M0/N671
+    SLICE_X16Y21.X       Tilo                  0.759   DISPLAY/DISPLCD/M0/N150
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>8_SW1
+    SLICE_X13Y17.G2      net (fanout=1)        1.175   DISPLAY/DISPLCD/M0/N150
+    SLICE_X13Y17.Y       Tilo                  0.704   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>8
+    SLICE_X13Y17.F4      net (fanout=3)        0.051   DISPLAY/DISPLCD/M0/N119
+    SLICE_X13Y17.X       Tilo                  0.704   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+    SLICE_X12Y14.F4      net (fanout=1)        0.271   DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>154
+    SLICE_X12Y14.CLK     Tfck                  0.892   DISPLAY/DISPLCD/M0/lcdstate<8>
+                                                       DISPLAY/DISPLCD/M0/lcdstate_mux0000<32>166
+                                                       DISPLAY/DISPLCD/M0/lcdstate_8
+    -------------------------------------------------  ---------------------------
+    Total                                     19.641ns (10.739ns logic, 8.902ns route)
+                                                       (54.7% logic, 45.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "CLK_GEN/clk_50m_unbuf" derived from
+ NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;
+ duty cycle corrected to 20 nS  HIGH 10 nS 
+
+--------------------------------------------------------------------------------
+
+Paths for end point DISPLAY/DISPLCD/M1/gstate_FSM_FFd9 (SLICE_X12Y33.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.090ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DISPLAY/DISPLCD/M1/gstate_FSM_FFd10 (FF)
+  Destination:          DISPLAY/DISPLCD/M1/gstate_FSM_FFd9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.093ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.005 - 0.002)
+  Source Clock:         clk_disp rising at 20.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: DISPLAY/DISPLCD/M1/gstate_FSM_FFd10 to DISPLAY/DISPLCD/M1/gstate_FSM_FFd9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y31.YQ      Tcko                  0.522   DISPLAY/DISPLCD/M1/gstate_FSM_FFd10
+                                                       DISPLAY/DISPLCD/M1/gstate_FSM_FFd10
+    SLICE_X12Y33.BY      net (fanout=2)        0.419   DISPLAY/DISPLCD/M1/gstate_FSM_FFd10
+    SLICE_X12Y33.CLK     Tckdi       (-Th)    -0.152   DISPLAY/DISPLCD/M1/gstate_FSM_FFd9
+                                                       DISPLAY/DISPLCD/M1/gstate_FSM_FFd9
+    -------------------------------------------------  ---------------------------
+    Total                                      1.093ns (0.674ns logic, 0.419ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DISPLAY/DISPLCD/M1/clearlcd (SLICE_X13Y31.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.100ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DISPLAY/DISPLCD/M0/lcdclear (FF)
+  Destination:          DISPLAY/DISPLCD/M1/clearlcd (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.102ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.022 - 0.020)
+  Source Clock:         clk_disp rising at 20.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: DISPLAY/DISPLCD/M0/lcdclear to DISPLAY/DISPLCD/M1/clearlcd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y28.XQ      Tcko                  0.474   DISPLAY/DISPLCD/lcdclear
+                                                       DISPLAY/DISPLCD/M0/lcdclear
+    SLICE_X13Y31.BY      net (fanout=11)       0.493   DISPLAY/DISPLCD/lcdclear
+    SLICE_X13Y31.CLK     Tckdi       (-Th)    -0.135   DISPLAY/DISPLCD/clearlcd
+                                                       DISPLAY/DISPLCD/M1/clearlcd
+    -------------------------------------------------  ---------------------------
+    Total                                      1.102ns (0.609ns logic, 0.493ns route)
+                                                       (55.3% logic, 44.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DISPLAY/DISPLCD/M1/clearlcd (SLICE_X13Y31.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.103ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DISPLAY/DISPLCD/M1/gstate_FSM_FFd11 (FF)
+  Destination:          DISPLAY/DISPLCD/M1/clearlcd (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.103ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 20.000ns
+  Destination Clock:    clk_disp rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: DISPLAY/DISPLCD/M1/gstate_FSM_FFd11 to DISPLAY/DISPLCD/M1/clearlcd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y30.XQ      Tcko                  0.473   DISPLAY/DISPLCD/M1/gstate_FSM_FFd11
+                                                       DISPLAY/DISPLCD/M1/gstate_FSM_FFd11
+    SLICE_X13Y31.CE      net (fanout=2)        0.561   DISPLAY/DISPLCD/M1/gstate_FSM_FFd11
+    SLICE_X13Y31.CLK     Tckce       (-Th)    -0.069   DISPLAY/DISPLCD/clearlcd
+                                                       DISPLAY/DISPLCD/M1/clearlcd
+    -------------------------------------------------  ---------------------------
+    Total                                      1.103ns (0.542ns logic, 0.561ns route)
+                                                       (49.1% logic, 50.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "CLK_GEN/clk_50m_unbuf" derived from
+ NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;
+ duty cycle corrected to 20 nS  HIGH 10 nS 
+
+--------------------------------------------------------------------------------
+Slack: 15.834ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 4.166ns (240.038MHz) (Tdcmpco)
+  Physical resource: CLK_GEN/DCM_SYS/CLK0
+  Logical resource: CLK_GEN/DCM_SYS/CLK0
+  Location pin: DCM_X0Y1.CLK0
+  Clock network: CLK_GEN/clk_50m_unbuf
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: AJ_BTNS/clk_count<0>/CLK
+  Logical resource: AJ_BTNS/clk_count_0/CK
+  Location pin: SLICE_X66Y25.CLK
+  Clock network: clk_disp
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: AJ_BTNS/clk_count<0>/CLK
+  Logical resource: AJ_BTNS/clk_count_0/CK
+  Location pin: SLICE_X66Y25.CLK
+  Clock network: clk_disp
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "CLK_GEN/clk_10m_unbuf" derived from 
+ NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;  multiplied by 5.00 to 100 nS and 
+duty cycle corrected to HIGH 50 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 173750 paths analyzed, 4894 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  80.740ns.
+--------------------------------------------------------------------------------
+
+Paths for end point MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26 (SLICE_X43Y73.SR), 618 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.852ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW1/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      16.148ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW1/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y14.YQ      Tcko                  0.652   LED_1_OBUF
+                                                       AJ_SW1/buff
+    SLICE_X41Y26.BX      net (fanout=66)       1.990   LED_1_OBUF
+    SLICE_X41Y26.X       Tbxx                  0.739   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.F3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.X       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00041
+    SLICE_X49Y76.F1      net (fanout=32)       4.709   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+    SLICE_X49Y76.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_lut<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+    SLICE_X49Y77.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+    SLICE_X49Y77.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>1
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<6>
+    SLICE_X43Y73.SR      net (fanout=1)        0.891   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>1
+    SLICE_X43Y73.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<26>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26
+    -------------------------------------------------  ---------------------------
+    Total                                     16.148ns (5.330ns logic, 10.818ns route)
+                                                       (33.0% logic, 67.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.635ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW0/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.365ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW0/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y24.YQ      Tcko                  0.652   LED_0_OBUF
+                                                       AJ_SW0/buff
+    SLICE_X41Y26.G1      net (fanout=107)      0.921   LED_0_OBUF
+    SLICE_X41Y26.X       Tif5x                 1.025   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_41
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.F3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.X       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00041
+    SLICE_X49Y76.F1      net (fanout=32)       4.709   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+    SLICE_X49Y76.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_lut<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+    SLICE_X49Y77.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+    SLICE_X49Y77.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>1
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<6>
+    SLICE_X43Y73.SR      net (fanout=1)        0.891   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>1
+    SLICE_X43Y73.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<26>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26
+    -------------------------------------------------  ---------------------------
+    Total                                     15.365ns (5.616ns logic, 9.749ns route)
+                                                       (36.6% logic, 63.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.676ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW0/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.324ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW0/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y24.YQ      Tcko                  0.652   LED_0_OBUF
+                                                       AJ_SW0/buff
+    SLICE_X41Y26.F1      net (fanout=107)      0.880   LED_0_OBUF
+    SLICE_X41Y26.X       Tif5x                 1.025   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_31
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.F3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.X       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00041
+    SLICE_X49Y76.F1      net (fanout=32)       4.709   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+    SLICE_X49Y76.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_lut<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+    SLICE_X49Y77.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<5>
+    SLICE_X49Y77.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>1
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>_wg_cy<6>
+    SLICE_X43Y73.SR      net (fanout=1)        0.891   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<26>1
+    SLICE_X43Y73.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<26>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_26
+    -------------------------------------------------  ---------------------------
+    Total                                     15.324ns (5.616ns logic, 9.708ns route)
+                                                       (36.6% logic, 63.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29 (SLICE_X40Y72.SR), 618 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.873ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW1/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      16.127ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW1/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y14.YQ      Tcko                  0.652   LED_1_OBUF
+                                                       AJ_SW1/buff
+    SLICE_X41Y26.BX      net (fanout=66)       1.990   LED_1_OBUF
+    SLICE_X41Y26.X       Tbxx                  0.739   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.G3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.Y       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00001
+    SLICE_X47Y80.F4      net (fanout=32)       4.199   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0000
+    SLICE_X47Y80.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<1>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_lut<0>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<0>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<1>
+    SLICE_X47Y81.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<1>
+    SLICE_X47Y81.COUT    Tbyp                  0.118   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<3>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<2>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<3>
+    SLICE_X47Y82.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<3>
+    SLICE_X47Y82.COUT    Tbyp                  0.118   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+    SLICE_X47Y83.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+    SLICE_X47Y83.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>1
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<6>
+    SLICE_X40Y72.SR      net (fanout=1)        1.144   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>1
+    SLICE_X40Y72.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29
+    -------------------------------------------------  ---------------------------
+    Total                                     16.127ns (5.566ns logic, 10.561ns route)
+                                                       (34.5% logic, 65.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.034ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW1/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.966ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW1/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y14.YQ      Tcko                  0.652   LED_1_OBUF
+                                                       AJ_SW1/buff
+    SLICE_X41Y26.BX      net (fanout=66)       1.990   LED_1_OBUF
+    SLICE_X41Y26.X       Tbxx                  0.739   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.F3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.X       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00041
+    SLICE_X47Y82.F3      net (fanout=32)       4.274   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+    SLICE_X47Y82.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_lut<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+    SLICE_X47Y83.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+    SLICE_X47Y83.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>1
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<6>
+    SLICE_X40Y72.SR      net (fanout=1)        1.144   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>1
+    SLICE_X40Y72.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29
+    -------------------------------------------------  ---------------------------
+    Total                                     15.966ns (5.330ns logic, 10.636ns route)
+                                                       (33.4% logic, 66.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.656ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW0/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.344ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW0/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y24.YQ      Tcko                  0.652   LED_0_OBUF
+                                                       AJ_SW0/buff
+    SLICE_X41Y26.G1      net (fanout=107)      0.921   LED_0_OBUF
+    SLICE_X41Y26.X       Tif5x                 1.025   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_41
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.G3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.Y       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00001
+    SLICE_X47Y80.F4      net (fanout=32)       4.199   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0000
+    SLICE_X47Y80.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<1>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_lut<0>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<0>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<1>
+    SLICE_X47Y81.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<1>
+    SLICE_X47Y81.COUT    Tbyp                  0.118   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<3>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<2>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<3>
+    SLICE_X47Y82.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<3>
+    SLICE_X47Y82.COUT    Tbyp                  0.118   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+    SLICE_X47Y83.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<5>
+    SLICE_X47Y83.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>1
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>_wg_cy<6>
+    SLICE_X40Y72.SR      net (fanout=1)        1.144   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<29>1
+    SLICE_X40Y72.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_29
+    -------------------------------------------------  ---------------------------
+    Total                                     15.344ns (5.852ns logic, 9.492ns route)
+                                                       (38.1% logic, 61.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25 (SLICE_X28Y72.SR), 618 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.905ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW1/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      16.095ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW1/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y14.YQ      Tcko                  0.652   LED_1_OBUF
+                                                       AJ_SW1/buff
+    SLICE_X41Y26.BX      net (fanout=66)       1.990   LED_1_OBUF
+    SLICE_X41Y26.X       Tbxx                  0.739   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y52.G4      net (fanout=115)      2.804   disp_addr<1>
+    SLICE_X35Y52.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0020
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000021
+    SLICE_X36Y51.F3      net (fanout=5)        0.424   MIPS/MIPS_CORE/DATAPATH/N25
+    SLICE_X36Y51.X       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00041
+    SLICE_X25Y85.F1      net (fanout=32)       3.816   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0004
+    SLICE_X25Y85.COUT    Topcyf                1.162   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_lut<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+    SLICE_X25Y86.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+    SLICE_X25Y86.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/N100
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<6>
+    SLICE_X28Y72.SR      net (fanout=1)        1.731   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>1
+    SLICE_X28Y72.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<25>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25
+    -------------------------------------------------  ---------------------------
+    Total                                     16.095ns (5.330ns logic, 10.765ns route)
+                                                       (33.1% logic, 66.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.031ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW1/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.969ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW1/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y14.YQ      Tcko                  0.652   LED_1_OBUF
+                                                       AJ_SW1/buff
+    SLICE_X41Y26.BX      net (fanout=66)       1.990   LED_1_OBUF
+    SLICE_X41Y26.X       Tbxx                  0.739   DISPLAY/addr_buf<1>
+                                                       Mmux_disp_addr_2_f5_0
+    SLICE_X35Y46.G2      net (fanout=115)      2.574   disp_addr<1>
+    SLICE_X35Y46.Y       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0023
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq000311
+    SLICE_X32Y63.G1      net (fanout=20)       1.552   MIPS/MIPS_CORE/DATAPATH/N22
+    SLICE_X32Y63.Y       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/N11
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq00031
+    SLICE_X25Y84.G4      net (fanout=17)       2.835   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq0003
+    SLICE_X25Y84.COUT    Topcyg                1.001   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<3>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_lut<3>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<3>
+    SLICE_X25Y85.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<3>
+    SLICE_X25Y85.COUT    Tbyp                  0.118   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<4>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+    SLICE_X25Y86.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+    SLICE_X25Y86.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/N100
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<6>
+    SLICE_X28Y72.SR      net (fanout=1)        1.731   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>1
+    SLICE_X28Y72.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<25>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25
+    -------------------------------------------------  ---------------------------
+    Total                                     15.969ns (5.287ns logic, 10.682ns route)
+                                                       (33.1% logic, 66.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.187ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               AJ_SW1/buff (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      15.813ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_disp rising at 80.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: AJ_SW1/buff to MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y14.YQ      Tcko                  0.652   LED_1_OBUF
+                                                       AJ_SW1/buff
+    SLICE_X36Y26.BX      net (fanout=66)       2.690   LED_1_OBUF
+    SLICE_X36Y26.X       Tbxx                  0.806   DISPLAY/addr_buf<4>
+                                                       Mmux_disp_addr_2_f5_3
+    SLICE_X33Y44.F3      net (fanout=110)      1.407   disp_addr<4>
+    SLICE_X33Y44.X       Tilo                  0.704   MIPS/MIPS_CORE/DATAPATH/N5
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_cmp_eq001211
+    SLICE_X34Y63.F4      net (fanout=17)       2.866   MIPS/MIPS_CORE/DATAPATH/N5
+    SLICE_X34Y63.X       Tilo                  0.759   MIPS/MIPS_CORE/DATAPATH/data_imm_exe<16>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<16>21
+    SLICE_X25Y85.G4      net (fanout=16)       1.883   MIPS/MIPS_CORE/DATAPATH/N12
+    SLICE_X25Y85.COUT    Topcyg                1.001   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_lut<5>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+    SLICE_X25Y86.CIN     net (fanout=1)        0.000   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<5>
+    SLICE_X25Y86.XB      Tcinxb                0.404   MIPS/MIPS_CORE/DATAPATH/N100
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>_wg_cy<6>
+    SLICE_X28Y72.SR      net (fanout=1)        1.731   MIPS/MIPS_CORE/DATAPATH/debug_data_signal_mux0000<25>1
+    SLICE_X28Y72.CLK     Tsrck                 0.910   MIPS/MIPS_CORE/DATAPATH/debug_data_signal<25>
+                                                       MIPS/MIPS_CORE/DATAPATH/debug_data_signal_25
+    -------------------------------------------------  ---------------------------
+    Total                                     15.813ns (5.236ns logic, 10.577ns route)
+                                                       (33.1% logic, 66.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "CLK_GEN/clk_10m_unbuf" derived from
+ NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;
+ multiplied by 5.00 to 100 nS and duty cycle corrected to HIGH 50 nS 
+
+--------------------------------------------------------------------------------
+
+Paths for end point MIPS/MIPS_CORE/DATAPATH/inst_addr_next_mem_7 (SLICE_X33Y59.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.955ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               MIPS/MIPS_CORE/DATAPATH/inst_addr_next_exe_7 (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/inst_addr_next_mem_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.959ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.044 - 0.040)
+  Source Clock:         clk_cpu rising at 100.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: MIPS/MIPS_CORE/DATAPATH/inst_addr_next_exe_7 to MIPS/MIPS_CORE/DATAPATH/inst_addr_next_mem_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y61.XQ      Tcko                  0.473   MIPS/MIPS_CORE/DATAPATH/inst_addr_next_exe<7>
+                                                       MIPS/MIPS_CORE/DATAPATH/inst_addr_next_exe_7
+    SLICE_X33Y59.BX      net (fanout=2)        0.393   MIPS/MIPS_CORE/DATAPATH/inst_addr_next_exe<7>
+    SLICE_X33Y59.CLK     Tckdi       (-Th)    -0.093   MIPS/MIPS_CORE/DATAPATH/inst_addr_next_mem<7>
+                                                       MIPS/MIPS_CORE/DATAPATH/inst_addr_next_mem_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.959ns (0.566ns logic, 0.393ns route)
+                                                       (59.0% logic, 41.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point MIPS/MIPS_CORE/DATAPATH/inst_addr_mem_29 (SLICE_X43Y82.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.958ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29 (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/inst_addr_mem_29 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.958ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_cpu rising at 100.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29 to MIPS/MIPS_CORE/DATAPATH/inst_addr_mem_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y83.XQ      Tcko                  0.473   MIPS/MIPS_CORE/DATAPATH/inst_addr_exe<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29
+    SLICE_X43Y82.BX      net (fanout=2)        0.392   MIPS/MIPS_CORE/DATAPATH/inst_addr_exe<29>
+    SLICE_X43Y82.CLK     Tckdi       (-Th)    -0.093   MIPS/MIPS_CORE/DATAPATH/inst_addr_mem<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/inst_addr_mem_29
+    -------------------------------------------------  ---------------------------
+    Total                                      0.958ns (0.566ns logic, 0.392ns route)
+                                                       (59.1% logic, 40.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29 (SLICE_X43Y83.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.959ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               MIPS/MIPS_CORE/DATAPATH/inst_addr_id_29 (FF)
+  Destination:          MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.963ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.008 - 0.004)
+  Source Clock:         clk_cpu rising at 100.000ns
+  Destination Clock:    clk_cpu rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: MIPS/MIPS_CORE/DATAPATH/inst_addr_id_29 to MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y81.XQ      Tcko                  0.473   MIPS/MIPS_CORE/DATAPATH/inst_addr_id<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/inst_addr_id_29
+    SLICE_X43Y83.BX      net (fanout=2)        0.397   MIPS/MIPS_CORE/DATAPATH/inst_addr_id<29>
+    SLICE_X43Y83.CLK     Tckdi       (-Th)    -0.093   MIPS/MIPS_CORE/DATAPATH/inst_addr_exe<29>
+                                                       MIPS/MIPS_CORE/DATAPATH/inst_addr_exe_29
+    -------------------------------------------------  ---------------------------
+    Total                                      0.963ns (0.566ns logic, 0.397ns route)
+                                                       (58.8% logic, 41.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "CLK_GEN/clk_10m_unbuf" derived from
+ NET "CCLK_IBUFG" PERIOD = 20 ns HIGH 40%;
+ multiplied by 5.00 to 100 nS and duty cycle corrected to HIGH 50 nS 
+
+--------------------------------------------------------------------------------
+Slack: 96.824ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 100.000ns
+  Low pulse: 50.000ns
+  Low pulse limit: 1.588ns (Tbpwl)
+  Physical resource: MIPS/DATA_RAM/Mram_data/CLKA
+  Logical resource: MIPS/DATA_RAM/Mram_data.A/CLKA
+  Location pin: RAMB16_X1Y8.CLKA
+  Clock network: clk_cpu
+--------------------------------------------------------------------------------
+Slack: 96.824ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 100.000ns
+  High pulse: 50.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: MIPS/DATA_RAM/Mram_data/CLKA
+  Logical resource: MIPS/DATA_RAM/Mram_data.A/CLKA
+  Location pin: RAMB16_X1Y8.CLKA
+  Clock network: clk_cpu
+--------------------------------------------------------------------------------
+Slack: 96.824ns (period - min period limit)
+  Period: 100.000ns
+  Min period limit: 3.176ns (314.861MHz) (Tbp)
+  Physical resource: MIPS/DATA_RAM/Mram_data/CLKA
+  Logical resource: MIPS/DATA_RAM/Mram_data.A/CLKA
+  Location pin: RAMB16_X1Y8.CLKA
+  Clock network: clk_cpu
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for CCLK_IBUFG
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|CCLK_IBUFG                     |     20.000ns|      7.500ns|     19.822ns|            0|            0|            0|      9715809|
+| CLK_GEN/clk_50m_unbuf         |     20.000ns|     19.822ns|          N/A|            0|            0|      9542059|            0|
+| CLK_GEN/clk_10m_unbuf         |    100.000ns|     80.740ns|          N/A|            0|            0|       173750|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CCLK           |   19.822|   16.449|    9.666|         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 9715809 paths, 0 nets, and 12577 connections
+
+Design statistics:
+   Minimum period:  80.740ns{1}   (Maximum frequency:  12.385MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Apr 14 19:12:31 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 226 MB
+
+
+

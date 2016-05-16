@@ -1,0 +1,28 @@
+Command line:
+   sim_mips_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51671
+
+Thu May 05 20:43:19 2016
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 841.134 Meg
+
+ Total Signals          : 164
+ Total Nets             : 732
+ Total Signal Drivers   : 79
+ Total Blocks           : 10
+ Total Primitive Blocks : 6
+ Total Processes        : 106
+ Total Traceable Variables  : 394
+ Total Scalar Nets and Variables : 12344
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 369.25 Meg
+
+Thu May 05 21:04:53 2016
+

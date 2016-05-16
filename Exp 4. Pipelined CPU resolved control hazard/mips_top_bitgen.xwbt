@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Arch\PipelinedCPUresolvedCtrlHzd\mips_top.ncd
+OUTFILE=Z:\Arch\PipelinedCPUresolvedCtrlHzd\mips_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=Z:\Arch\PipelinedCPUresolvedCtrlHzd
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661
