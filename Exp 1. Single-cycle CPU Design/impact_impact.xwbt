@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Arch\SingleClockCPU\impact.xsl
+OUTFILE=C:\Arch\SingleClockCPU\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Arch\SingleClockCPU
+LICENSE=iMPACT
+USER_INFO=iMPACT
