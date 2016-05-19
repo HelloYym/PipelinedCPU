@@ -95,11 +95,11 @@ module cp0(
 		jump_addr = 0;
 		if (ir) begin
 			jump_en = 1;
-			jump_addr <= EHBR;
+			jump_addr = EHBR;
 		end
 		else if (eret) begin
 			jump_en = 1;
-			jump_addr <= EPCR;
+			jump_addr = EPCR;
 		end
 	end
 	
@@ -111,19 +111,6 @@ module cp0(
 	end
 	
 	
-	/*
-	// jump determination
-	always @(*) begin
-		if (ir || eret)
-			jump_en = 1;
-		else 
-			jump_en = 0;
-	end
-	
-	*/
-	
-	
-
 	always @(*) begin
 		if (oper == EXE_CP_NONE) begin	//MFC0
 			case(addr_r)

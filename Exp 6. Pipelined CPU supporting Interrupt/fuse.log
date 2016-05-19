@@ -1,18 +1,18 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Arch/PipelinedCPUwithInterrupt/sim_mips_isim_beh.exe -prj Z:/Arch/PipelinedCPUwithInterrupt/sim_mips_beh.prj work.sim_mips work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/sim_mips_isim_beh.exe -prj Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/sim_mips_beh.prj work.sim_mips work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/regfile.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/alu.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/datapath.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/cp0.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/controller.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/mips_core.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/inst_rom.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/data_ram.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/mips.v" into library work
-Analyzing Verilog file "Z:/Arch/PipelinedCPUwithInterrupt/sim_mips.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/regfile.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/alu.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/datapath.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/cp0.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/controller.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_core.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/inst_rom.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/data_ram.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips.v" into library work
+Analyzing Verilog file "Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/sim_mips.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
@@ -30,6 +30,6 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 8 sub-compilation(s) to finish...
 Compiled 11 Verilog Units
-Built simulation executable Z:/Arch/PipelinedCPUwithInterrupt/sim_mips_isim_beh.exe
-Fuse Memory Usage: 28728 KB
-Fuse CPU Usage: 656 ms
+Built simulation executable Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/sim_mips_isim_beh.exe
+Fuse Memory Usage: 29440 KB
+Fuse CPU Usage: 546 ms

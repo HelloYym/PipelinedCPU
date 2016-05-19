@@ -2,14 +2,14 @@ Command line:
    sim_mips_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52046
+     -socket  50391
 
-Sun May 15 20:47:34 2016
+Thu May 19 17:24:56 2016
 
 
  Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 687.997 Meg
+ Current Memory Usage: 845.271 Meg
 
  Total Signals          : 191
  Total Nets             : 904
@@ -20,9 +20,9 @@ Sun May 15 20:47:34 2016
  Total Traceable Variables  : 536
  Total Scalar Nets and Variables : 15549
 
- Total Simulation Time: 0.0625 sec
+ Total Simulation Time: 0.078125 sec
 
- Current Memory Usage: 687.997 Meg
+ Current Memory Usage: 1159.86 Meg
 
-Sun May 15 20:59:53 2016
+Thu May 19 17:25:45 2016
 

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//Mac/Home/Arch/PipelinedCPUwithInterrupt/cp0.v";
+static const char *ng0 = "//Mac/Home/Arch/Exp 6. Pipelined CPU supporting Interrupt/cp0.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 
@@ -532,7 +532,7 @@ LAB9:    xsi_set_current_line(97, ng0);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
     t5 = (t0 + 17080);
-    xsi_vlogvar_wait_assign_value(t5, t4, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t5, t4, 0, 0, 32);
     goto LAB8;
 
 LAB10:    xsi_set_current_line(100, ng0);
@@ -546,7 +546,7 @@ LAB13:    xsi_set_current_line(101, ng0);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
     t5 = (t0 + 17080);
-    xsi_vlogvar_wait_assign_value(t5, t4, 0, 0, 32, 0LL);
+    xsi_vlogvar_assign_value(t5, t4, 0, 0, 32);
     goto LAB12;
 
 }

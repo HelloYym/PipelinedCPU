@@ -5,7 +5,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc mips_top.ucf -p xc3s500e-fg320-4
 mips_top.ngc mips_top.ngd
 
-Reading NGO file "Z:/Arch/PipelinedCPU_31instructions/mips_top.ngc" ...
+Reading NGO file "Z:/Arch/Exp 6. Pipelined CPU supporting
+Interrupt/mips_top.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -39,10 +40,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   7
 
-Total memory usage is 202260 kilobytes
+Total memory usage is 202288 kilobytes
 
 Writing NGD file "mips_top.ngd" ...
-Total REAL time to NGDBUILD completion:  4 sec
+Total REAL time to NGDBUILD completion:  8 sec
 Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "mips_top.bld"...

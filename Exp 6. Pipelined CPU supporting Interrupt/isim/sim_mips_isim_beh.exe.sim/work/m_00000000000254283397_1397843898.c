@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//Mac/Home/Arch/PipelinedCPUwithInterrupt/inst_rom.v";
+static const char *ng0 = "//Mac/Home/Arch/Exp 6. Pipelined CPU supporting Interrupt/inst_rom.v";
 static const char *ng1 = "inst_mem.hex";
 static int ng2[] = {0, 0};
 static unsigned int ng3[] = {0U, 0U};

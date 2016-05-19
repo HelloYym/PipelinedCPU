@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-15T20:45:09</DateModified>
+  <DateModified>2016-05-19T18:16:08</DateModified>
   <ModuleName>mips_top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>Z:/Arch/PipelinedCPUwithInterrupt/iseconfig/mips_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Arch/PipelinedCPUwithInterrupt\</ImplementationReportsDirectory>
+  <SavedFilePath>Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/iseconfig/mips_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt\</ImplementationReportsDirectory>
   <DateInitialized>2016-03-24T19:40:35</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

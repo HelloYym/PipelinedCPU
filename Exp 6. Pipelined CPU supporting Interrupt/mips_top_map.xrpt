@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Thu May 05 21:01:44 2016">
+  <application stringID="Map" timeStamp="Thu May 19 18:29:45 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -68,21 +68,21 @@
       <section stringID="MAP_DESIGN_SUMMARY">
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="3"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="330184"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="4 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="4 secs "/>
+        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="2"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="330156"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="14 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="5 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="9312" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="1171">
-          <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="1107"/>
-          <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="64"/>
+        <item AVAILABLE="9312" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="1273">
+          <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="1241"/>
+          <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="32"/>
         </item>
-        <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="3510">
-          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="326"/>
+        <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="3764">
+          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="328"/>
           <item dataType="int" stringID="MAP_NUM_DP_RAM" value="384"/>
         </item>
-        <item AVAILABLE="4656" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="1981">
+        <item AVAILABLE="4656" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="2142">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -93,7 +93,7 @@
       </section>
       <section stringID="MAP_HARD_IP_REPORTING">
         <item AVAILABLE="20" dataType="int" stringID="MAP_NUM_RAMB16" value="2"/>
-        <item AVAILABLE="24" dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="5"/>
+        <item AVAILABLE="24" dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="4"/>
         <item AVAILABLE="4" dataType="int" stringID="MAP_NUM_DCM" value="1"/>
       </section>
       <section stringID="MAP_MACRO_RPM_REPORTING">
@@ -346,7 +346,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="64"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="65"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>
@@ -377,11 +377,11 @@
         <item stringID="MAP_INITP_05" value="0000000000000000000000000000000000000000000000000000000000000000"/>
         <item stringID="MAP_INITP_06" value="0000000000000000000000000000000000000000000000000000000000000000"/>
         <item stringID="MAP_INITP_07" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_00" value="20050003012440228C890000AC820000200500040C00001B342400503C010000"/>
-        <item stringID="MAP_INIT_01" value="014638240149402601493025312AFFFF2009FFFF3908555534A8FFFF20A5FFFF"/>
-        <item stringID="MAP_INIT_02" value="0008440300084400000543C02005FFFF00000000080000080000000010A00003"/>
-        <item stringID="MAP_INIT_03" value="14A0FFFC20A5FFFF010940208C890000000040200000000008000019000843C2"/>
-        <item stringID="MAP_INIT_04" value="00000000000000000000000000000000000000000008100003E0000820840004"/>
+        <item stringID="MAP_INIT_00" value="000000000800000520420001000018200000102040811800242100203C010000"/>
+        <item stringID="MAP_INIT_01" value="0000000000000000000000000000000000000000420000182063000140041000"/>
+        <item stringID="MAP_INIT_02" value="0000000000000000000000000000000000000000000000000000000000000000"/>
+        <item stringID="MAP_INIT_03" value="0000000000000000000000000000000000000000000000000000000000000000"/>
+        <item stringID="MAP_INIT_04" value="0000000000000000000000000000000000000000000000000000000000000000"/>
         <item stringID="MAP_INIT_05" value="0000000000000000000000000000000000000000000000000000000000000000"/>
         <item stringID="MAP_INIT_06" value="0000000000000000000000000000000000000000000000000000000000000000"/>
         <item stringID="MAP_INIT_07" value="0000000000000000000000000000000000000000000000000000000000000000"/>
