@@ -8,5 +8,109 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/alu.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/alu.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/alu.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/alu.v</arg>&quot; Line <arg fmt="%d" index="2">15</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/alu.v&quot; line 15
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/anti_jitter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/anti_jitter.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/anti_jitter.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/clk_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/clk_gen.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/clk_gen.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/controller.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/controller.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/controller.v</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/controller.v&quot; line 70
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/cp0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/cp0.v</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/cp0.v&quot; line 47
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/data_ram.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/datapath.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/datapath.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/datapath.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/datapath.v</arg>&quot; Line <arg fmt="%d" index="2">88</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/datapath.v&quot; line 88
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/display.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/display.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/display.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/displcd.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/function.vh&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/inst_rom.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_core.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_core.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_core.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_top.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/mips_top.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/regfile.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/regfile.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/define.vh&apos; in file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/regfile.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/Arch/Exp 6. Pipelined CPU supporting Interrupt/sim_mips.v&quot; into library work</arg>
+</msg>
+
 </messages>
 
