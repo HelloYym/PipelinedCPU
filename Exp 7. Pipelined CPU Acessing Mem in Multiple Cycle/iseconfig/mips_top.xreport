@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-27T09:57:12</DateModified>
+  <DateModified>2016-06-16T18:34:37</DateModified>
   <ModuleName>mips_top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>Z:/Arch/Exp 7. Pipelined CPU Acessing Mem in Multiple Cycle/iseconfig/mips_top.xreport</SavedFilePath>

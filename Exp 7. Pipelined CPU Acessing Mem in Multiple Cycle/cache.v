@@ -1,0 +1,74 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    18:29:55 06/16/2016 
+// Design Name: 
+// Module Name:    cache 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module cache(
+	input wire clk,
+	input wire rst,
+	input wire [31:0] addr,
+	input wire load,
+	input wire edit,
+	input wire invalid,
+	input wire [31:0] din,
+	output reg hit,
+	output reg [31:0] dout,
+	output reg valid,
+	output reg dirty,
+	output reg [21:0] tag
+    );
+	 
+`include "mips_define.vh"
+
+	reg [LINE_NUM-1:0] inner_valid = 0;
+	reg [LINE_NUM-1:0] inner_dirty = 0;
+	reg [LINE_NUM-1:0] inner_tag [0:LINE_NUM-1];
+	reg [WORD_BITS-1:0] inner_data [0:LINE_NUM*LINE_WORDS-1];
+	
+	always @(negedge clk) begin
+		dout = inner_data[addr[ADDR_BITS-TAG_BITS-1:WORD_BYTES_WIDTH]];
+		valid = inner_valid[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]];
+		dirty = inner_dirty[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]];
+		tag = inner_tag[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]];
+		hit = valid & tag==addr[ADDR_BITS-1:ADDR_BITS-TAG_BITS];
+	end
+	always @(posedge clk) begin
+		
+		if (invalid) begin
+			inner_valid[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = 0;
+			inner_dirty[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = 0;
+		end
+		
+		if (load) begin
+			inner_valid[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = 1;
+			inner_dirty[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = 0;
+			inner_tag[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = addr[ADDR_BITS-1:ADDR_BITS-TAG_BITS];	
+		end
+		
+		if (edit) begin
+			inner_dirty[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = 1;
+			inner_tag[addr[ADDR_BITS-TAG_BITS-1:LINE_WORDS_WIDTH+WORD_BYTES_WIDTH]] = addr[ADDR_BITS-1:ADDR_BITS-TAG_BITS];
+		end
+
+		if (edit&hit || load)
+			inner_data[addr[ADDR_BITS-TAG_BITS-1:WORD_BYTES_WIDTH]] = din;
+
+	end
+
+
+endmodule

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "Z:/Arch/Exp 8. Cache Design/sim_cache_isim_beh.exe" -prj "Z:/Arch/Exp 8. Cache Design/sim_cache_beh.prj" "work.sim_cache" "work.glbl" 

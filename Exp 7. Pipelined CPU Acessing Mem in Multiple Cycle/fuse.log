@@ -28,8 +28,7 @@ Compiling module mips
 Compiling module sim_mips
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
 Compiled 11 Verilog Units
 Built simulation executable Z:/Arch/Exp 7. Pipelined CPU Acessing Mem in Multiple Cycle/sim_mips_isim_beh.exe
-Fuse Memory Usage: 29632 KB
-Fuse CPU Usage: 764 ms
+Fuse Memory Usage: 28936 KB
+Fuse CPU Usage: 530 ms

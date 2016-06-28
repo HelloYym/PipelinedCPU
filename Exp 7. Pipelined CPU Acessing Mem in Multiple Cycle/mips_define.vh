@@ -1,3 +1,14 @@
+// Cache
+localparam
+	LINE_NUM = 64,
+	WORD_BITS = 32,
+	ADDR_BITS = 32,
+	TAG_BITS = 22,
+	LINE_WORDS_WIDTH = 2,
+	WORD_BYTES_WIDTH = 2,
+	LINE_WORDS = 4;
+
+
 // CP0 registers
 localparam
 	//CP0_SR    = 0,

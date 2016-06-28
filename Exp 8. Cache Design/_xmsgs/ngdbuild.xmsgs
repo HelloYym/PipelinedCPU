@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET  &quot;CCLK&quot;		PERIOD = 20.0ns HIGH 40%;&gt; [mips_top.ucf(6)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">CLK_GEN/clk_25m</arg> with clock driver <arg fmt="%s" index="2">CLK_GEN/CLK_BUF_25M</arg> drives no clock pins
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MIPS/MIPS_CORE/exe_valid</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MIPS/MIPS_CORE/id_valid</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MIPS/MIPS_CORE/if_valid</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MIPS/MIPS_CORE/mem_valid</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">MIPS/MIPS_CORE/wb_valid</arg>&apos; has no driver
+</msg>
+
+</messages>
+
